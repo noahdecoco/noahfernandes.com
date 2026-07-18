@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+    /* Safe and Sound Journeys palette */
+    --color-bark: #241d15;
+    --color-moss: #4a5d3a;
+    --color-clay: #a8542e;
+    --color-bone: #efe8d8;
+    --color-ochre: #c9962c;
+    --color-dusk: #3e3a5e;
+
+    --font-display: "Playfair Display", serif;
+    --font-body: "Work Sans", sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bark);
+    scroll-behavior: smooth;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+/* shared keyframes, referenced via Tailwind arbitrary animate-[...] values */
+@keyframes ssj-scroll {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
