@@ -1,49 +1,105 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Noah Fernandes</title>
+    <title>
+      Noah Fernandes | Musician for Ecstatic Dance, Sound Healing &amp; Ceremony
+    </title>
     <meta
-            name="description"
-            content="Parts-work coaching, live music, and plant medicine held together — a gentle, grounded practice based in Amsterdam."
+      name="description"
+      content="Noah Fernandes is an Amsterdam-based musician making live music for ecstatic dance, sound healing, yoga, breathwork and ceremony."
     />
+    <link rel="canonical" href="https://noahfernandes.com/" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Noah Fernandes" />
+    <meta property="og:type" content="profile" />
+    <meta property="profile:first_name" content="Noah" />
+    <meta property="profile:last_name" content="Fernandes" />
     <meta
-            property="og:description"
-            content="Parts-work coaching, live music, and plant medicine held together — a gentle, grounded practice based in Amsterdam."
+      property="og:title"
+      content="Noah Fernandes | Musician, Music as Medicine"
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/og-image.jpg" />
+    <meta
+      property="og:description"
+      content="Noah Fernandes is an Amsterdam-based musician making live music for ecstatic dance, sound healing, yoga, breathwork and ceremony."
+    />
+    <meta property="og:url" content="https://noahfernandes.com/" />
+    <meta
+      property="og:image"
+      content="https://noahfernandes.com/og-image.jpg"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Noah Fernandes" />
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Noah Fernandes | Musician, Music as Medicine"
+    />
+    <meta
+      name="twitter:description"
+      content="Noah Fernandes is an Amsterdam-based musician making live music for ecstatic dance, sound healing, yoga, breathwork and ceremony."
+    />
+    <meta
+      name="twitter:image"
+      content="https://noahfernandes.com/og-image.jpg"
+    />
 
     <meta name="theme-color" content="#241D15" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Fonts used across the site: Playfair Display (display) + Work Sans (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Work+Sans:wght@300;400;500;600&display=swap"
-            rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Work+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
     />
 
+    <!-- structured data, helps Google understand this is a person, not a generic business -->
+    <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Noah Fernandes",
+          "url": "https://noahfernandes.com",
+          "image": "https://noahfernandes.com/og-image.jpg",
+          "jobTitle": ["Musician", "Live Looping Artist", "Sound Healer"],
+          "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Amsterdam",
+              "addressCountry": "NL"
+          },
+          "sameAs": [
+              "https://open.spotify.com/artist/5p3IIXsYQPHxCrtggdRAJ6",
+              "https://www.youtube.com/@sounds-like-noah",
+              "https://www.instagram.com/sounds.like.noah/"
+          ]
+      }
+    </script>
+
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            background-color: #241D15;
-            scroll-behavior: smooth;
-        }
-        #root {
-            min-height: 100vh;
-        }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #241d15;
+        scroll-behavior: smooth;
+      }
+      #root {
+        min-height: 100vh;
+      }
     </style>
-</head>
-<body>
-<div id="root"></div>
-<script type="module" src="/src/main.tsx"></script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
