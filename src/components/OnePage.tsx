@@ -60,6 +60,10 @@ const FAQS = [
     a: "Yes. Fill in the form below with the date, location, type of session and number of people, and we'll take it from there.",
   },
   {
+    q: "Do you work one-on-one?",
+    a: "Yes. Alongside events, I offer private sessions for individuals and couples, such as a sound healing journey or a private ceremony. Choose \"Private session\" in the form below and tell me what you're looking for.",
+  },
+  {
     q: "Where are you based?",
     a: "Amsterdam. Get in touch if your event is elsewhere and we'll see what's possible.",
   },

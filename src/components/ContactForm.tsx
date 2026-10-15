@@ -10,6 +10,7 @@ const EVENT_TYPES = [
   "Breathwork",
   "Ceremony",
   "Body Percussion Workshop",
+  "Private session",
   "Something else",
 ];
 
