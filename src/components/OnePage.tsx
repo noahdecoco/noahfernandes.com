@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import noahImage from "../assets/noah.jpg";
 import backgroundImage from "../assets/noah-background.jpg";
+import aboutImage from "../assets/noah-about.jpg";
 import ContactForm from "./ContactForm";
 
 // edit everything below this line to change the site's copy and links
@@ -221,19 +222,26 @@ export default function OnePage() {
         </section>
 
         {/* about */}
-        <section id="about" className="py-16 text-center">
+        <section id="about" className="py-16">
           <SectionTitle>About</SectionTitle>
+          <img
+            src={aboutImage}
+            alt="Noah playing bansuri flute on a misty bridge at sunrise"
+            loading="lazy"
+            className="w-full aspect-[4/5] object-cover rounded-2xl border border-bone/15 mb-8"
+          />
           <div className="font-body text-bone/70 text-sm sm:text-base leading-relaxed space-y-5">
             <p>
-              Raised in Goa with music always around me, I've been performing
-              since I was six. Today I make music that moves in many directions,
-              and I offer it wherever people gather to work on themselves.
+              I was born in Goa to a Goan father and a French mother. My dad is a musician, so music was always around me, and my mum is a wonderful cook, so I learned early how to enjoy the good things in life. I wrote my first song at six, splashing in the bathtub and singing at the top of my lungs. My dad recorded it, made a backing track, and soon after I was singing it live on stage. I later picked up guitar and flute, but drums and percussion have always had my heart.
             </p>
             <p>
-              On the dance floor, in a sound bath, on the yoga mat or in
-              ceremony, my aim is the same: to create a space where people can
-              drop out of their heads and into their bodies. Music is the
-              medicine.
+              For years my music was earth and fire: 90s rock, hitting the drums hard and screaming my lungs out on stage. What made it special was always the people. I used to tell audiences: I love making this music, but when you love it, I love it even more.
+            </p>
+            <p>
+              Then I quit alcohol, and everything shifted. Sober, my music turned to air and water: soft vocals, gentle guitar and flute, music for stillness and inner journeys. Eventually I found my way to ecstatic dances, where people celebrated through music without drugs or alcohol, and to plant medicine ceremonies, where music carried people deeper within.
+            </p>
+            <p>
+              Today I bring all of it together: earth, fire, air and water. I create soundscapes that move between states, from stillness to release and back again, all played live on real instruments and a looper, with no samples. In a time when so much music is machine-made, I'm here to remind us that music was made by humans, for humans. I'm just the vessel it moves through, and sharing it is my gift. Music is the medicine.
             </p>
           </div>
         </section>
