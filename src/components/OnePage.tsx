@@ -68,6 +68,14 @@ const FAQS = [
     a: "I bring my instruments and looping setup. For larger rooms we'll talk through sound system needs ahead of time.",
   },
   {
+    q: "Are your sets alcohol- and drug-free?",
+    a: "Yes. I don't drink, and my music is made for clear, conscious spaces where people celebrate and go deep without needing anything else.",
+  },
+  {
+    q: "Do you consider plant medicine a drug?",
+    a: "No. When plant medicine is used consciously, with intention and in a held ceremonial setting, I see it as medicine, not a drug.",
+  },
+  {
     q: "How do I hear your music first?",
     a: "Have a listen on Spotify below, or watch live sessions on YouTube.",
   },
