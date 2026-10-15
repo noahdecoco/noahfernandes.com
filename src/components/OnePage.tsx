@@ -41,6 +41,10 @@ const OFFERINGS = [
     body: "Live music that follows the breath and the arc of the session, so the space feels held.",
   },
   {
+    title: "Body Percussion",
+    body: "Workshops where the body becomes the instrument. We clap, stomp and sing our way into rhythm, connection and play.",
+  },
+  {
     title: "Ceremony",
     body: "Music for plant medicine and other ceremonies, with care for the people in the circle.",
   },
@@ -165,7 +169,7 @@ export default function OnePage() {
             {OFFERINGS.map((o) => (
               <div
                 key={o.title}
-                className="rounded-2xl border border-bone/15 bg-bark/50 p-5"
+                className="rounded-2xl border border-bone/15 bg-bark/50 p-5 sm:odd:last:col-span-2"
               >
                 <h3 className="font-body text-ochre text-sm uppercase tracking-[0.15em]">
                   {o.title}

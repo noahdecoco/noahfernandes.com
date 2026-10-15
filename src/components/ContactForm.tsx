@@ -9,6 +9,7 @@ const EVENT_TYPES = [
   "Sound Healing",
   "Breathwork",
   "Ceremony",
+  "Body Percussion Workshop",
   "Something else",
 ];
 
