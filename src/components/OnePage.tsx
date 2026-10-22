@@ -11,8 +11,6 @@ import { useEvents } from "./events";
 import NotifyDialog from "./NotifyDialog";
 
 // edit everything below this line to change the site's copy and links
-// shown as written; the tel: link strips spaces. leave empty to hide it.
-const PHONE: string = "+31 6 31958895";
 const EMAIL = "hello@noahfernandes.com";
 const SPOTIFY_ARTIST_ID = "5p3IIXsYQPHxCrtggdRAJ6";
 
@@ -569,20 +567,7 @@ export default function OnePage() {
             <ContactForm email={EMAIL} />
           </div>
           <p className="font-body text-bone/65 text-sm mt-8">
-            Prefer to talk first?{" "}
-            {PHONE && (
-              <>
-                Call{" "}
-                <a
-                  href={`tel:${PHONE.replace(/\s/g, "")}`}
-                  className={linkClass}
-                >
-                  {PHONE}
-                </a>{" "}
-                or email{" "}
-              </>
-            )}
-            {!PHONE && "Email "}
+            Or email me directly at{" "}
             <a href={`mailto:${EMAIL}`} className={linkClass}>
               {EMAIL}
             </a>
@@ -602,6 +587,12 @@ export default function OnePage() {
           </div>
         )}
         <Socials />
+        <a
+          href={`mailto:${EMAIL}`}
+          className={`${linkClass} inline-block mt-5`}
+        >
+          {EMAIL}
+        </a>
         <p className="font-body text-bone/35 text-xs mt-6">
           © {new Date().getFullYear()} Noah Fernandes
         </p>
