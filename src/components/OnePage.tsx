@@ -74,8 +74,8 @@ const FAQS = [
     a: "Yes. Fill in the form below with the date, location, type of session and number of people, and we'll take it from there. I can also pair a set with a workshop, so your group gets to dance to the music and make it too.",
   },
   {
-    q: "Do you work one-on-one?",
-    a: 'Yes. Alongside events, I offer private sessions for individuals and couples, such as a sound journey or a private ceremony. Choose "Private session" in the form below and tell me what you\'re looking for.',
+    q: "Do you offer private sessions?",
+    a: 'Yes. Alongside events, I offer private sessions for individuals, couples and small groups, such as a sound journey or a private ceremony. Choose "Private session" in the form below and tell me what you\'re looking for.',
   },
   {
     q: "Where are you from?",
