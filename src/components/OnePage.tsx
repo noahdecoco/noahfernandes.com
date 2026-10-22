@@ -35,15 +35,15 @@ const SOCIALS = [
 const OFFERINGS = [
   {
     title: "Ecstatic Dance & Festivals",
-    body: "Live, looped and improvised sets for ecstatic dances, festivals and live venues, carrying a crowd from stillness to release and back again.",
+    body: "Live, looped and improvised sets for ecstatic dances, festivals and venues, carrying the crowd from stillness to release and back again.",
   },
   {
     title: "Sound Journeys",
-    body: "Immersive soundscapes for mindful deep inner exploration, self discovery and healing.",
+    body: "Immersive, slowly unfolding soundscapes for sound journeys, guiding people inward for deep rest, self-discovery and healing.",
   },
   {
     title: "Retreats & Ceremony",
-    body: "Live music for wellness retreats and ceremonial events, working alongside facilitators to hold the journey.",
+    body: "Live music for wellness retreats and ceremonies, played alongside facilitators to support people as they go deeper within.",
   },
   // {
   //   title: "Breathwork",
