@@ -130,13 +130,19 @@ function SectionTitle({
   );
 }
 
-// full-width band, optionally with its own darkened photo behind it
+// fine film grain laid over plain sections so the brown doesn't read as flat
+const GRAIN =
+  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
+
+// full-width band, optionally with its own darkened photo behind it.
+// without a photo, `glow` places a soft warm light (a CSS background) instead.
 function Section({
   id,
   image,
   overlay = "bg-bark/80",
   className = "",
   padding = "py-24 sm:py-32",
+  glow,
   children,
 }: {
   id?: string;
@@ -144,6 +150,7 @@ function Section({
   overlay?: string;
   className?: string;
   padding?: string;
+  glow?: string;
   children: ReactNode;
 }) {
   return (
@@ -160,6 +167,15 @@ function Section({
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className={`absolute inset-0 ${overlay}`} />
+        </>
+      )}
+      {!image && glow && (
+        <>
+          <div className="absolute inset-0" style={{ background: glow }} />
+          <div
+            className="absolute inset-0 opacity-[0.07] mix-blend-overlay pointer-events-none"
+            style={{ backgroundImage: GRAIN }}
+          />
         </>
       )}
       <div className={`relative mx-auto w-full max-w-5xl px-6 ${padding}`}>
@@ -384,7 +400,10 @@ export default function OnePage() {
       </Section>
 
       {/* about */}
-      <Section id="about">
+      <Section
+        id="about"
+        glow="radial-gradient(ellipse 60% 55% at 20% 50%, rgba(201,150,44,0.24), transparent 70%), radial-gradient(ellipse 50% 50% at 90% 15%, rgba(168,84,46,0.18), transparent 70%)"
+      >
         <SectionTitle>About</SectionTitle>
         <div className="grid gap-10 md:grid-cols-2 md:gap-14 items-center">
           <img
@@ -417,7 +436,11 @@ export default function OnePage() {
       </Section>
 
       {/* faq */}
-      <Section id="faq" className="border-t border-bone/10">
+      <Section
+        id="faq"
+        className="border-t border-bone/10"
+        glow="radial-gradient(ellipse 55% 50% at 85% 60%, rgba(62,58,94,0.35), transparent 70%), radial-gradient(ellipse 45% 40% at 10% 10%, rgba(201,150,44,0.10), transparent 70%)"
+      >
         <SectionTitle>FAQ</SectionTitle>
         <div className="max-w-3xl mx-auto divide-y divide-bone/10 border-y border-bone/10">
           {FAQS.map((f) => (
