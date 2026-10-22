@@ -72,12 +72,12 @@ const FAQS = [
     a: 'Yes. Alongside events, I offer private sessions for individuals and couples, such as a sound journey or a private ceremony. Choose "Private session" in the form below and tell me what you\'re looking for.',
   },
   {
-    q: "Where are you based?",
-    a: "Amsterdam. Get in touch if your event is elsewhere and we'll see what's possible.",
+    q: "Where are you from?",
+    a: "I'm originally from Goa, India, and I'm mixed: half Indian, half French. I've lived in India and Singapore, and I'm now based in Amsterdam. If your event is elsewhere, get in touch and we'll see what's possible.",
   },
   {
     q: "Do you bring your own equipment?",
-    a: "I bring my instruments and looping setup. For larger rooms we'll talk through sound system needs ahead of time.",
+    a: "Yes, I bring my own instruments and looping setup. Get in touch and I'll send you my tech rider, so you know exactly what I need from the venue.",
   },
   {
     q: "Do you drink or use anything when you play?",
