@@ -5,7 +5,7 @@ import { useState, type FormEvent } from "react";
 const FORMSPREE_ID = "mvkzdzqn";
 
 const EVENT_TYPES = [
-  "Ecstatic Dance",
+  "Ecstatic dance or festival",
   "Sound Journey",
   "Retreat or ceremony",
   "Private session",

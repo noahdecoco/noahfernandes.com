@@ -33,8 +33,8 @@ const SOCIALS = [
 
 const OFFERINGS = [
   {
-    title: "Ecstatic Dance",
-    body: "Live, looped and improvised sets that carry a crowd from stillness to release and back again.",
+    title: "Ecstatic Dance & Festivals",
+    body: "Live, looped and improvised sets for ecstatic dances, festivals and live venues, carrying a crowd from stillness to release and back again.",
   },
   {
     title: "Sound Journeys",
@@ -42,7 +42,7 @@ const OFFERINGS = [
   },
   {
     title: "Retreats & Ceremony",
-    body: "Live music for psilocybin and plant medicine retreats, working alongside facilitators to hold the journey.",
+    body: "Live music for wellness retreats and ceremonial events, working alongside facilitators to hold the journey.",
   },
   // {
   //   title: "Breathwork",
@@ -69,7 +69,7 @@ const FAQS = [
   },
   {
     q: "Do you work one-on-one?",
-    a: 'Yes. Alongside events, I offer private sessions for individuals and couples, such as a sound healing journey or a private ceremony. Choose "Private session" in the form below and tell me what you\'re looking for.',
+    a: 'Yes. Alongside events, I offer private sessions for individuals and couples, such as a sound journey or a private ceremony. Choose "Private session" in the form below and tell me what you\'re looking for.',
   },
   {
     q: "Where are you based?",
@@ -80,8 +80,8 @@ const FAQS = [
     a: "I bring my instruments and looping setup. For larger rooms we'll talk through sound system needs ahead of time.",
   },
   {
-    q: "Are your sets alcohol- and drug-free?",
-    a: "Yes. I don't drink, and my music is made for clear, conscious spaces where people celebrate and go deep without needing anything else.",
+    q: "Do you drink or use anything when you play?",
+    a: "No. I don't drink, and I don't need anything to go deep. Whatever the venue, my music is made to bring people out of their heads and into their bodies and hearts.",
   },
   {
     q: "Do you consider plant medicine a drug?",
