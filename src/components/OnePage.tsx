@@ -47,8 +47,8 @@ const OFFERINGS = [
     body: "Live music for wellness retreats and ceremonies, played alongside facilitators to support people as they go deeper within.",
   },
   {
-    title: "Workshops",
-    body: "Body percussion, voice and rhythm workshops for groups, where everyone makes the music together and connects through sound and play.",
+    title: "The Human Loop",
+    body: "Body percussion, voice and rhythm workshops where the group becomes the loop, making music together and connecting through sound and play.",
   },
   // {
   //   title: "Breathwork",
