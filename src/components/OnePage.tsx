@@ -3,6 +3,7 @@ import heroImage from "../assets/bg-hero.jpg";
 import offeringsImage from "../assets/bg-offerings.jpg";
 import watchImage from "../assets/noah-background.jpg";
 import contactImage from "../assets/bg-contact.jpg";
+import listenImage from "../assets/bg-listen.jpg";
 import aboutImage from "../assets/noah-about.jpg";
 import ContactForm from "./ContactForm";
 
@@ -367,7 +368,7 @@ export default function OnePage() {
       </Section>
 
       {/* listen: studio recordings, deliberately quieter than the live videos */}
-      <Section id="listen" padding="py-20 sm:py-24">
+      <Section id="listen" image={listenImage} overlay="bg-bark/85" padding="py-20 sm:py-24">
         <SectionTitle kicker="Studio recordings">Listen</SectionTitle>
         <p className="font-body text-bone/65 text-base text-center -mt-6 mb-10">
           Tracks produced in my home studio.
