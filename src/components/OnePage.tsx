@@ -30,24 +30,28 @@ const SOCIALS = [
 const OFFERINGS = [
   {
     title: "Ecstatic Dance",
-    body: "Live, looped and improvised sets that carry a room from stillness to release and back again.",
+    body: "Live, looped and improvised sets that carry a crowd from stillness to release and back again.",
   },
   {
-    title: "Sound Healing",
-    body: "Immersive soundscapes for sound baths and healing sessions, private or in groups.",
+    title: "Sound Journeys",
+    body: "Immersive soundscapes for mindful deep inner exploration, self discovery and healing.",
   },
   {
-    title: "Breathwork",
-    body: "Live music that follows the breath and the arc of the session, so the space feels held.",
+    title: "Retreats & Ceremony",
+    body: "Live music for psilocybin and plant medicine retreats, working alongside facilitators to hold the journey.",
   },
-  {
-    title: "Body Percussion",
-    body: "Workshops where the body becomes the instrument. We clap, stomp and sing our way into rhythm, connection and play.",
-  },
-  {
-    title: "Ceremony",
-    body: "Music for plant medicine and other ceremonies, with care for the people in the circle.",
-  },
+  // {
+  //   title: "Breathwork",
+  //   body: "Live music that follows the breath and the arc of the session, so the space feels held.",
+  // },
+  // {
+  //   title: "Body Percussion",
+  //   body: "Workshops where the body becomes the instrument. We clap, stomp and sing our way into rhythm, connection and play.",
+  // },
+  // {
+  //   title: "Ceremony",
+  //   body: "Music for plant medicine and other ceremonies, with care for the people in the circle.",
+  // },
 ];
 
 const FAQS = [

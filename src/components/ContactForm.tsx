@@ -6,10 +6,8 @@ const FORMSPREE_ID = "mvkzdzqn";
 
 const EVENT_TYPES = [
   "Ecstatic Dance",
-  "Sound Healing",
-  "Breathwork",
-  "Ceremony",
-  "Body Percussion Workshop",
+  "Sound Journey",
+  "Retreat or ceremony",
   "Private session",
   "Something else",
 ];
