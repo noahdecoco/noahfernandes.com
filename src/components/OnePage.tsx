@@ -7,6 +7,8 @@ import listenImage from "../assets/bg-listen.jpg";
 import aboutImage from "../assets/noah-about.jpg";
 import ContactForm from "./ContactForm";
 import NewsletterForm, { newsletterEnabled } from "./NewsletterForm";
+import { useEvents } from "./events";
+import NotifyDialog from "./NotifyDialog";
 
 // edit everything below this line to change the site's copy and links
 // shown as written; the tel: link strips spaces. leave empty to hide it.
@@ -281,6 +283,11 @@ function Socials() {
 
 export default function OnePage() {
   const [featured, ...moreVideos] = VIDEOS;
+  const events = useEvents();
+  const [notifyFor, setNotifyFor] = useState<string | null>(null);
+  const nav = events.length
+    ? [{ label: "Events", href: "#events" }, ...NAV]
+    : NAV;
 
   return (
     <div className="min-h-screen bg-bark text-bone">
@@ -291,7 +298,7 @@ export default function OnePage() {
             Noah Fernandes
           </a>
           <div className="flex items-center gap-6">
-            {NAV.map((n) => (
+            {nav.map((n) => (
               <a
                 key={n.href}
                 href={n.href}
@@ -367,6 +374,74 @@ export default function OnePage() {
         </div>
       </Section>
 
+      {/* events: read live from the Google Sheet, hidden when nothing is coming up */}
+      {events.length > 0 && (
+        <Section
+          id="events"
+          glow="radial-gradient(ellipse 50% 60% at 15% 40%, rgba(201,150,44,0.18), transparent 70%), radial-gradient(ellipse 45% 50% at 90% 80%, rgba(74,93,58,0.25), transparent 70%)"
+        >
+          <SectionTitle kicker="Come and join">Upcoming Events</SectionTitle>
+          <ul className="max-w-3xl mx-auto divide-y divide-bone/10 border-y border-bone/10">
+            {events.map((e) => (
+              <li
+                key={`${e.date.getTime()}-${e.title}`}
+                className="flex items-center gap-5 sm:gap-8 py-6"
+              >
+                <div className="w-14 sm:w-16 shrink-0 text-center">
+                  <p className="font-display text-bone text-3xl sm:text-4xl leading-none">
+                    {e.date.getDate()}
+                  </p>
+                  <p className="font-body text-ochre text-[11px] uppercase tracking-[0.2em] mt-2">
+                    {e.date.toLocaleString("en-GB", { month: "short" })}
+                  </p>
+                </div>
+                <div className="flex-1 min-w-0">
+                  {e.type && (
+                    <span className="inline-block rounded-full border border-ochre/50 text-ochre font-body text-[10px] uppercase tracking-[0.2em] px-2.5 py-0.5 mb-2">
+                      {e.type}
+                    </span>
+                  )}
+                  <h3 className="font-display italic text-bone text-xl sm:text-2xl leading-tight">
+                    {e.title}
+                  </h3>
+                  <p className="font-body text-bone/60 text-sm mt-1">
+                    {[
+                      e.date.toLocaleDateString("en-GB", { weekday: "long" }),
+                      e.time,
+                      e.venue,
+                      e.city,
+                    ]
+                      .filter(Boolean)
+                      .join(" · ")}
+                  </p>
+                </div>
+                {e.link ? (
+                  <a
+                    href={e.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 rounded-full border border-bone/30 text-bone font-body text-xs sm:text-sm px-4 sm:px-5 py-2 hover:border-ochre hover:text-ochre transition-colors"
+                  >
+                    Info
+                  </a>
+                ) : (
+                  // no link yet: offer the newsletter in a pop-up so they hear when it opens
+                  newsletterEnabled && (
+                    <button
+                      type="button"
+                      onClick={() => setNotifyFor(e.title)}
+                      className="shrink-0 rounded-full border border-dashed border-bone/30 text-bone/70 font-body text-xs sm:text-sm px-4 sm:px-5 py-2 hover:border-ochre hover:text-ochre transition-colors cursor-pointer"
+                    >
+                      Notify me
+                    </button>
+                  )
+                )}
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
       {/* watch */}
       <Section id="watch" image={watchImage} overlay="bg-bark/85">
         <SectionTitle kicker="Live looping sessions">Watch</SectionTitle>
@@ -406,7 +481,7 @@ export default function OnePage() {
 
       {/* newsletter: a slim band, right where fans have just watched and listened */}
       {newsletterEnabled && (
-        <section className="border-y border-bone/10 bg-bark">
+        <section id="newsletter" className="scroll-mt-16 border-y border-bone/10 bg-bark">
           <div className="mx-auto max-w-5xl px-6 py-14 sm:py-16 text-center">
             <p className="font-body text-ochre/80 text-xs uppercase tracking-[0.3em]">
               Newsletter
@@ -514,6 +589,8 @@ export default function OnePage() {
           </p>
         </div>
       </Section>
+
+      <NotifyDialog eventTitle={notifyFor} onClose={() => setNotifyFor(null)} />
 
       <footer className="border-t border-bone/10 py-12 px-6 text-center">
         {newsletterEnabled && (
