@@ -6,6 +6,7 @@ import contactImage from "../assets/bg-contact.jpg";
 import listenImage from "../assets/bg-listen.jpg";
 import aboutImage from "../assets/noah-about.jpg";
 import ContactForm from "./ContactForm";
+import NewsletterForm, { newsletterEnabled } from "./NewsletterForm";
 
 // edit everything below this line to change the site's copy and links
 // shown as written; the tel: link strips spaces. leave empty to hide it.
@@ -399,6 +400,23 @@ export default function OnePage() {
         />
       </Section>
 
+      {/* newsletter: a slim band, right where fans have just watched and listened */}
+      {newsletterEnabled && (
+        <section className="border-y border-bone/10 bg-bark">
+          <div className="mx-auto max-w-5xl px-6 py-14 sm:py-16 text-center">
+            <p className="font-body text-ochre/80 text-xs uppercase tracking-[0.3em]">
+              Newsletter
+            </p>
+            <p className="font-display italic text-bone text-2xl sm:text-3xl mt-3">
+              New sessions and upcoming dates, in your inbox
+            </p>
+            <div className="mt-8">
+              <NewsletterForm />
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* about */}
       <Section
         id="about"
@@ -492,7 +510,15 @@ export default function OnePage() {
         </div>
       </Section>
 
-      <footer className="border-t border-bone/10 py-12 text-center">
+      <footer className="border-t border-bone/10 py-12 px-6 text-center">
+        {newsletterEnabled && (
+          <div className="mb-10">
+            <p className="font-body text-bone/60 text-sm mb-4">
+              Stay in the loop
+            </p>
+            <NewsletterForm compact />
+          </div>
+        )}
         <Socials />
         <p className="font-body text-bone/35 text-xs mt-6">
           © {new Date().getFullYear()} Noah Fernandes
