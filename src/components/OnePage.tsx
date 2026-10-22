@@ -136,16 +136,12 @@ export default function OnePage() {
           </h1>
 
           <p className="font-body text-xs uppercase tracking-[0.2em] mt-3 text-clay">
-            Sound Artist & Musician
-          </p>
-
-          <p className="font-body text-bone/45 text-xs uppercase tracking-[0.15em] mt-3">
-            Based in Amsterdam
+            Amsterdam based Live-Looping Artist
           </p>
 
           <p className="font-body text-bone/75 text-base sm:text-lg leading-relaxed mt-6">
-            Live music for ecstatic dance, sound healing, breathwork and
-            ceremony. For spaces where people come to feel, move and heal.
+            Organic and evolving sound journeys created in real time with
+            instruments collected from around the world.
           </p>
 
           <div className="w-full flex flex-col gap-3 mt-10">
@@ -252,16 +248,22 @@ export default function OnePage() {
           />
           <div className="font-body text-bone/70 text-sm sm:text-base leading-relaxed space-y-5">
             <p>
-              I was born in Goa to a Goan father and a French mother. My dad is a musician, so music was always around me, and my mum is a wonderful cook, so I learned early how to enjoy the good things in life. I wrote my first song at six, splashing in the bathtub and singing at the top of my lungs. My dad recorded it, made a backing track, and soon after I was singing it live on stage. I later picked up guitar and flute, but drums and percussion have always had my heart.
+              I'm Noah, born and raised in Goa, India. I create immersive sound
+              journeys with the instruments I've collected from the places I've
+              travelled to over the years. My music is live and adaptive, an
+              ever-evolving connection between the energy present in me and the
+              space.
             </p>
             <p>
-              For years my music was earth and fire: 90s rock, hitting the drums hard and screaming my lungs out on stage. What made it special was always the people. I used to tell audiences: I love making this music, but when you love it, I love it even more.
+              For years my music was earth and fire: loud rock, hard drums,
+              screaming. Then it became air and water: soft vocals, flute,
+              stillness. Today I bring all of those elements together, and a set
+              can move through any of them.
             </p>
             <p>
-              Then I quit alcohol, and everything shifted. Sober, my music turned to air and water: soft vocals, gentle guitar and flute, music for stillness and inner journeys. Eventually I found my way to ecstatic dances, where people celebrated through music without drugs or alcohol, and to plant medicine ceremonies, where music carried people deeper within.
-            </p>
-            <p>
-              Today I bring all of it together: earth, fire, air and water. I create soundscapes that move between states, from stillness to release and back again, all played live on real instruments and a looper, with no samples. In a time when so much music is machine-made, I'm here to remind us that music was made by humans, for humans. I'm just the vessel it moves through, and sharing it is my gift. Music is the medicine.
+              I offer my music at ecstatic dances, sound journeys and
+              ceremonies. For me, it's all about connection: with ourselves,
+              with each other, and with the joy of being human and alive.
             </p>
           </div>
         </section>
