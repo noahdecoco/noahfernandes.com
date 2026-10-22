@@ -414,8 +414,8 @@ export default function OnePage() {
           />
           <div className="font-body text-bone/75 text-base sm:text-lg leading-relaxed space-y-6">
             <p>
-              I'm Noah, born and raised in Goa, India. I create immersive sound
-              journeys with the instruments I've collected from the places I've
+              I'm Noah, born and raised in Goa, India. I create immersive music
+              with the instruments I've collected from the places I've
               travelled to over the years. My music is live and adaptive, an
               ever-evolving connection between the energy present in me and the
               space.
@@ -427,8 +427,8 @@ export default function OnePage() {
               can move through any of them.
             </p>
             <p>
-              I offer my music at ecstatic dances, sound journeys and
-              ceremonies. For me, it's all about connection: with ourselves,
+              I offer my music at ecstatic dances and festivals, sound
+              journeys, retreats and ceremonies. For me, it's all about connection: with ourselves,
               with each other, and with the joy of being human and alive.
             </p>
           </div>
