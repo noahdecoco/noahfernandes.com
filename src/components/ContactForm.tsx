@@ -8,6 +8,7 @@ const EVENT_TYPES = [
   "Ecstatic dance or festival",
   "Sound Journey",
   "Retreat or ceremony",
+  "Workshop",
   "Private session",
   "Something else",
 ];

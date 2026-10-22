@@ -46,6 +46,10 @@ const OFFERINGS = [
     title: "Retreats & Ceremony",
     body: "Live music for wellness retreats and ceremonies, played alongside facilitators to support people as they go deeper within.",
   },
+  {
+    title: "Workshops",
+    body: "Body percussion, voice and rhythm workshops for groups, where everyone makes the music together and connects through sound and play.",
+  },
   // {
   //   title: "Breathwork",
   //   body: "Live music that follows the breath and the arc of the session, so the space feels held.",
@@ -67,7 +71,7 @@ const FAQS = [
   },
   {
     q: "Can I book you for my event or retreat?",
-    a: "Yes. Fill in the form below with the date, location, type of session and number of people, and we'll take it from there.",
+    a: "Yes. Fill in the form below with the date, location, type of session and number of people, and we'll take it from there. I can also pair a set with a workshop, so your group gets to dance to the music and make it too.",
   },
   {
     q: "Do you work one-on-one?",
@@ -346,11 +350,11 @@ export default function OnePage() {
       {/* offerings */}
       <Section id="offerings" image={offeringsImage} overlay="bg-bark/85">
         <SectionTitle kicker="Where my music lives">Offerings</SectionTitle>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 max-w-4xl mx-auto">
           {OFFERINGS.map((o) => (
             <div
               key={o.title}
-              className="rounded-2xl border border-bone/15 bg-bark/40 backdrop-blur-sm p-8 sm:odd:last:col-span-2 lg:odd:last:col-span-1"
+              className="rounded-2xl border border-bone/15 bg-bark/40 backdrop-blur-sm p-8 sm:odd:last:col-span-2"
             >
               <h3 className="font-body text-ochre text-sm uppercase tracking-[0.25em]">
                 {o.title}
@@ -446,7 +450,8 @@ export default function OnePage() {
             </p>
             <p>
               I offer my music at ecstatic dances and festivals, sound
-              journeys, retreats and ceremonies. For me, it's all about connection: with ourselves,
+              journeys, retreats and ceremonies, and I lead workshops where people
+              make the music themselves. For me, it's all about connection: with ourselves,
               with each other, and with the joy of being human and alive.
             </p>
           </div>
