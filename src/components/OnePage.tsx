@@ -335,7 +335,7 @@ export default function OnePage() {
             Noah Fernandes
           </h1>
           <p className="font-body text-bone/85 text-base sm:text-xl leading-relaxed mt-8 max-w-2xl mx-auto">
-            Organic, evolving music created in real time with instruments
+            Organic, evolving music created in the moment with instruments
             collected from around the world.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
