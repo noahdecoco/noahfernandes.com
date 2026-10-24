@@ -86,10 +86,6 @@ const FAQS = [
     a: "Yes, I bring my own instruments and looping setup. Get in touch and I'll send you my tech rider, so you know exactly what I need from the venue.",
   },
   {
-    q: "Do you drink or use anything when you play?",
-    a: "No. I don't drink, and I don't need anything to go deep. Whatever the venue, my music is made to bring people out of their heads and into their bodies and hearts.",
-  },
-  {
     q: "Do you consider plant medicine a drug?",
     a: "No. When plant medicine is used consciously, with intention and in a held ceremonial setting, I see it as medicine, not a drug.",
   },
