@@ -13,6 +13,7 @@ import NotifyDialog from "./NotifyDialog";
 // edit everything below this line to change the site's copy and links
 const EMAIL = "hello@noahfernandes.com";
 const KVK = "80492827";
+const BTW_ID = "NL003447542B70";
 const SPOTIFY_ARTIST_ID = "5p3IIXsYQPHxCrtggdRAJ6";
 
 // YouTube video IDs (the part after watch?v= in the link).
@@ -595,7 +596,7 @@ export default function OnePage() {
           {EMAIL}
         </a>
         <p className="font-body text-bone/35 text-xs mt-6">
-          © {new Date().getFullYear()} Noah Fernandes · KvK {KVK}
+          © {new Date().getFullYear()} Noah Fernandes · KvK {KVK} · btw {BTW_ID}
         </p>
       </footer>
     </div>
