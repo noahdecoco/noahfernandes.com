@@ -40,7 +40,7 @@ const OFFERINGS = [
   },
   {
     title: "Sound Journeys",
-    body: "Immersive, slowly unfolding soundscapes for sound journeys, guiding people inward for deep rest, self-discovery and healing.",
+    body: "Immersive, slowly unfolding soundscapes for sound journeys, guiding people inward for deep rest and self-discovery.",
   },
   {
     title: "Retreats & Ceremony",
