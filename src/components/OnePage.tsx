@@ -50,7 +50,7 @@ const OFFERINGS = [
   },
   {
     title: "Tribe Sessions",
-    body: "Guided workshops where we discover the sound each of us carries and learn to resonate as one, through voice, body percussion and unplugged instruments.",
+    body: "Workshops I facilitate, where we discover the sound each of us carries and learn to resonate as one, through voice, body percussion and unplugged instruments.",
   },
   // {
   //   title: "Breathwork",
