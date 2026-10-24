@@ -1,0 +1,42 @@
+# builds the site and copies it to the droplet on every push to master.
+# needs three repository secrets (Settings -> Secrets and variables -> Actions):
+#   DEPLOY_HOST  the droplet's IP address
+#   DEPLOY_USER  the SSH user (root)
+#   DEPLOY_KEY   a private SSH key whose public half is in that user's ~/.ssh/authorized_keys
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch: # also allows a manual run from the Actions tab
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+
+      # no --delete: files on the server that aren't in dist/ are left alone
+      - name: Upload to droplet
+        run: |
+          rsync -avz -e "ssh -i ~/.ssh/deploy_key" dist/ \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/noahfernandes.com/"
