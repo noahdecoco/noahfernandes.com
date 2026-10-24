@@ -518,13 +518,17 @@ export default function OnePage() {
             <p>
               For years my music was earth and fire: loud rock, hard drums,
               screaming. Then it became air and water: soft vocals, flute,
-              stillness. Today I bring all of those elements together, and a set
-              can move through any of them.
+              stillness. Today I bring all of those elements together. Every set
+              starts with listening, to myself, to the people and to the space,
+              and the music becomes whatever the moment needs: a dance, a
+              journey inward, or something in between.
             </p>
             <p>
               I offer my music at ecstatic dances and festivals, sound
-              journeys, retreats and ceremonies, and I lead workshops where people
-              make the music themselves. For me, it's all about connection: with ourselves,
+              journeys, retreats and ceremonies. As a facilitator, I also guide
+              Tribe Sessions, workshops where people find their own sound and
+              make music together. For me, it's all about connection,
+              through the beautiful power of music and sound: with ourselves,
               with each other, and with the joy of being human and alive.
             </p>
           </div>
