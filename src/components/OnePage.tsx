@@ -21,7 +21,7 @@ const SPOTIFY_ARTIST_ID = "5p3IIXsYQPHxCrtggdRAJ6";
 // so it skips the text on the YouTube thumbnail. add `frame: "maxres1"` to pick another.
 const VIDEOS: { id: string; title: string; frame?: string }[] = [
   { id: "oRT6zA0aBbU", title: "Calm your anxious mind" },
-  { id: "vl_704ZeMqs", title: "Zen & Funky Live Looping Session" },
+  { id: "QKBYHoLNZ9U", title: "A Sound Journey from Ashram to Jungle" },
   { id: "BHkwrfycJvU", title: "Chill and groovy live looping session" },
   { id: "2OI-pz6DttQ", title: "Healing Bansuri Melodies" },
 ];
