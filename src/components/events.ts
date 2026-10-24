@@ -19,7 +19,7 @@ export type EventItem = {
 
 // only used while developing locally without a sheet, so the section can be previewed
 const SAMPLE_CSV = `Date,Time,Title,Type,Venue,City,Link,Publish
-2099-11-14,19:30,The Human Loop,Workshop,Sample venue,Amsterdam,https://example.com,TRUE
+2099-11-14,19:30,Tribe Session,Workshop,Sample venue,Amsterdam,https://example.com,TRUE
 2099-11-22,20:00,Ecstatic Dance,Set,Sample venue,Amsterdam,,TRUE
 2099-11-30,20:00,Draft event,Set,,Amsterdam,,FALSE
 2099-12-06,11:00,"Sound Journey, winter edition",Journey,,Utrecht,https://example.com,TRUE`;
