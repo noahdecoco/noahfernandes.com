@@ -1,4 +1,22 @@
 import { useState, type ReactNode } from "react";
+import {
+  EMAIL,
+  HIPSY_URL,
+  JOURNEYS_PATH,
+  SPOTIFY_ARTIST_ID,
+  EventList,
+  Section,
+  SectionTitle,
+  SiteFooter,
+  SiteHeader,
+  Socials,
+  external,
+  ghostButton,
+  inlineLink,
+  linkClass,
+  primaryButton,
+  useScrollToHash,
+} from "./site";
 import heroImage from "../assets/bg-hero.jpg";
 import offeringsImage from "../assets/bg-offerings.jpg";
 import watchImage from "../assets/noah-background.jpg";
@@ -10,12 +28,8 @@ import NewsletterForm, { newsletterEnabled } from "./NewsletterForm";
 import { useEvents } from "./events";
 import NotifyDialog from "./NotifyDialog";
 
-// edit everything below this line to change the site's copy and links
-const EMAIL = "hello@noahfernandes.com";
-const KVK = "80492827";
-const BTW_ID = "NL003447542B70";
-const SPOTIFY_ARTIST_ID = "5p3IIXsYQPHxCrtggdRAJ6";
-const SSJ_URL = "https://hipsy.nl/safeandsoundjourneys";
+// edit everything below this line to change the home page's copy and links
+// (contact details, socials, header and footer live in site.tsx)
 
 // YouTube video IDs (the part after watch?v= in the link).
 // the cover is a frame from the middle of the video (maxres1/2/3 = early/middle/late),
@@ -27,15 +41,6 @@ const VIDEOS: { id: string; title: string; frame?: string }[] = [
   { id: "2OI-pz6DttQ", title: "Healing Bansuri Melodies" },
 ];
 
-const SOCIALS = [
-  {
-    label: "Spotify",
-    href: `https://open.spotify.com/artist/${SPOTIFY_ARTIST_ID}`,
-  },
-  { label: "YouTube", href: "https://www.youtube.com/@sounds-like-noah" },
-  { label: "Instagram", href: "https://www.instagram.com/sounds.like.noah/" },
-];
-
 const OFFERINGS: {
   title: string;
   body: string;
@@ -44,7 +49,7 @@ const OFFERINGS: {
   {
     title: "Sound Journeys",
     body: "Immersive, slowly unfolding soundscapes for sound journeys, guiding people inward for deep rest and self-discovery. I also host my own.",
-    link: { label: "Safe and Sound Journeys", href: SSJ_URL },
+    link: { label: "Safe and Sound Journeys", href: JOURNEYS_PATH },
   },
   {
     title: "Retreats & Ceremony",
@@ -121,12 +126,7 @@ const FAQS: { q: string; a: ReactNode }[] = [
       <>
         No. When plant medicine is used consciously, with intention and in a
         held ceremonial setting, I see it as medicine, not a drug. Through{" "}
-        <a
-          href={SSJ_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline underline-offset-4 decoration-1 hover:text-ochre transition-colors"
-        >
+        <a href={JOURNEYS_PATH} className={inlineLink}>
           Safe and Sound Journeys
         </a>
         , I occasionally hold gentle ceremonies with truffle tea, which is
@@ -139,97 +139,6 @@ const FAQS: { q: string; a: ReactNode }[] = [
     a: "Watch my live looping sessions on YouTube below, or listen to my studio recordings on Spotify.",
   },
 ];
-
-const NAV = [
-  { label: "Watch", href: "#watch" },
-  { label: "Listen", href: "#listen" },
-  { label: "About", href: "#about" },
-  { label: "FAQ", href: "#faq" },
-];
-
-const linkClass =
-  "font-body text-bone/60 text-sm underline underline-offset-4 decoration-1 hover:text-bone transition-colors duration-200";
-const primaryButton =
-  "inline-block rounded-full bg-ochre text-bark font-body font-medium text-sm sm:text-base px-8 py-3.5 transition-transform duration-200 hover:scale-[1.03]";
-const ghostButton =
-  "inline-block rounded-full border border-bone/30 text-bone font-body font-medium text-sm sm:text-base px-8 py-3.5 transition-colors duration-200 hover:border-ochre/70 hover:text-ochre";
-
-function SectionTitle({
-  children,
-  kicker,
-}: {
-  children: ReactNode;
-  kicker?: string;
-}) {
-  return (
-    <div className="text-center mb-12 sm:mb-16">
-      {kicker && (
-        <p className="font-body text-ochre/80 text-xs uppercase tracking-[0.3em] mb-4">
-          {kicker}
-        </p>
-      )}
-      <h2 className="font-body font-light text-bone uppercase text-2xl sm:text-4xl tracking-[0.35em] sm:tracking-[0.45em] pl-[0.35em] sm:pl-[0.45em]">
-        {children}
-      </h2>
-      <div className="mx-auto mt-6 h-px w-12 bg-ochre/60" />
-    </div>
-  );
-}
-
-// fine film grain laid over plain sections so the brown doesn't read as flat
-const GRAIN =
-  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
-
-// full-width band, optionally with its own darkened photo behind it.
-// without a photo, `glow` places a soft warm light (a CSS background) instead.
-function Section({
-  id,
-  image,
-  overlay = "bg-bark/80",
-  className = "",
-  padding = "py-24 sm:py-32",
-  glow,
-  children,
-}: {
-  id?: string;
-  image?: string;
-  overlay?: string;
-  className?: string;
-  padding?: string;
-  glow?: string;
-  children: ReactNode;
-}) {
-  return (
-    <section
-      id={id}
-      className={`relative scroll-mt-16 overflow-hidden ${className}`}
-    >
-      {image && (
-        <>
-          <img
-            src={image}
-            alt=""
-            loading="lazy"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className={`absolute inset-0 ${overlay}`} />
-        </>
-      )}
-      {!image && glow && (
-        <>
-          <div className="absolute inset-0" style={{ background: glow }} />
-          <div
-            className="absolute inset-0 opacity-[0.07] mix-blend-overlay pointer-events-none"
-            style={{ backgroundImage: GRAIN }}
-          />
-        </>
-      )}
-      <div className={`relative mx-auto w-full max-w-5xl px-6 ${padding}`}>
-        {children}
-      </div>
-    </section>
-  );
-}
 
 // shows a styled still from the video; the real player only loads on click
 function VideoCard({
@@ -302,59 +211,18 @@ function VideoCard({
   );
 }
 
-function Socials() {
-  return (
-    <div className="flex items-center justify-center gap-6">
-      {SOCIALS.map((s) => (
-        <a
-          key={s.label}
-          href={s.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={linkClass}
-        >
-          {s.label}
-        </a>
-      ))}
-    </div>
-  );
-}
-
 export default function OnePage() {
   const [featured, ...moreVideos] = VIDEOS;
   const events = useEvents();
   const [notifyFor, setNotifyFor] = useState<string | null>(null);
-  const nav = events.length
-    ? [{ label: "Events", href: "#events" }, ...NAV]
-    : NAV;
-
+  useScrollToHash(events.length);
   return (
     <div className="min-h-screen bg-bark text-bone">
-      {/* top bar */}
-      <header className="fixed top-0 inset-x-0 z-50 bg-bark/70 backdrop-blur-md border-b border-bone/10">
-        <nav className="mx-auto max-w-5xl px-6 h-16 flex items-center justify-between">
-          <a href="#top" className="font-display italic text-lg text-bone">
-            Noah Fernandes
-          </a>
-          <div className="flex items-center gap-6">
-            {nav.map((n) => (
-              <a
-                key={n.href}
-                href={n.href}
-                className="hidden md:inline font-body text-xs uppercase tracking-[0.2em] text-bone/70 hover:text-ochre transition-colors"
-              >
-                {n.label}
-              </a>
-            ))}
-            <a
-              href="#contact"
-              className="rounded-full border border-ochre/70 text-ochre font-body text-xs uppercase tracking-[0.2em] px-4 py-2 hover:bg-ochre hover:text-bark transition-colors"
-            >
-              Book
-            </a>
-          </div>
-        </nav>
-      </header>
+      <SiteHeader
+        page="home"
+        showEvents={events.length > 0}
+        cta={{ label: "Book", href: "/#contact" }}
+      />
 
       {/* hero */}
       <section
@@ -380,10 +248,10 @@ export default function OnePage() {
             instruments collected from around the world.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
-            <a href="#contact" className={`${primaryButton} w-full sm:w-auto`}>
+            <a href="/#contact" className={`${primaryButton} w-full sm:w-auto`}>
               Book me for your event
             </a>
-            <a href="#watch" className={`${ghostButton} w-full sm:w-auto`}>
+            <a href="/#watch" className={`${ghostButton} w-full sm:w-auto`}>
               Watch me live
             </a>
           </div>
@@ -411,8 +279,7 @@ export default function OnePage() {
               {o.link && (
                 <a
                   href={o.link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...external(o.link.href)}
                   className="inline-block mt-5 font-body text-ochre text-sm hover:text-bone transition-colors"
                 >
                   {o.link.label} →
@@ -430,64 +297,7 @@ export default function OnePage() {
           glow="radial-gradient(ellipse 50% 60% at 15% 40%, rgba(201,150,44,0.18), transparent 70%), radial-gradient(ellipse 45% 50% at 90% 80%, rgba(74,93,58,0.25), transparent 70%)"
         >
           <SectionTitle kicker="Come and join">Upcoming Events</SectionTitle>
-          <ul className="max-w-3xl mx-auto divide-y divide-bone/10 border-y border-bone/10">
-            {events.map((e) => (
-              <li
-                key={`${e.date.getTime()}-${e.title}`}
-                className="flex items-center gap-5 sm:gap-8 py-6"
-              >
-                <div className="w-14 sm:w-16 shrink-0 text-center">
-                  <p className="font-display text-bone text-3xl sm:text-4xl leading-none">
-                    {e.date.getDate()}
-                  </p>
-                  <p className="font-body text-ochre text-[11px] uppercase tracking-[0.2em] mt-2">
-                    {e.date.toLocaleString("en-GB", { month: "short" })}
-                  </p>
-                </div>
-                <div className="flex-1 min-w-0">
-                  {e.type && (
-                    <span className="inline-block rounded-full border border-ochre/50 text-ochre font-body text-[10px] uppercase tracking-[0.2em] px-2.5 py-0.5 mb-2">
-                      {e.type}
-                    </span>
-                  )}
-                  <h3 className="font-display italic text-bone text-xl sm:text-2xl leading-tight">
-                    {e.title}
-                  </h3>
-                  <p className="font-body text-bone/60 text-sm mt-1">
-                    {[
-                      e.date.toLocaleDateString("en-GB", { weekday: "long" }),
-                      e.time,
-                      e.venue,
-                      e.city,
-                    ]
-                      .filter(Boolean)
-                      .join(" · ")}
-                  </p>
-                </div>
-                {e.link ? (
-                  <a
-                    href={e.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0 rounded-full border border-bone/30 text-bone font-body text-xs sm:text-sm px-4 sm:px-5 py-2 hover:border-ochre hover:text-ochre transition-colors"
-                  >
-                    Info
-                  </a>
-                ) : (
-                  // no link yet: offer the newsletter in a pop-up so they hear when it opens
-                  newsletterEnabled && (
-                    <button
-                      type="button"
-                      onClick={() => setNotifyFor(e.title)}
-                      className="shrink-0 rounded-full border border-dashed border-bone/30 text-bone/70 font-body text-xs sm:text-sm px-4 sm:px-5 py-2 hover:border-ochre hover:text-ochre transition-colors cursor-pointer"
-                    >
-                      Notify me
-                    </button>
-                  )
-                )}
-              </li>
-            ))}
-          </ul>
+          <EventList events={events} onNotify={setNotifyFor} />
         </Section>
       )}
 
@@ -533,7 +343,7 @@ export default function OnePage() {
         </div>
         <p className="text-center mt-12">
           <a
-            href={SSJ_URL}
+            href={HIPSY_URL}
             target="_blank"
             rel="noopener noreferrer"
             className={linkClass}
@@ -608,12 +418,7 @@ export default function OnePage() {
             <p>
               I offer my music at sound journeys, retreats and ceremonies,
               ecstatic dances and festivals. In 2024 I founded{" "}
-              <a
-                href={SSJ_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-bone underline underline-offset-4 decoration-1 decoration-ochre/60 hover:text-ochre transition-colors"
-              >
+              <a href={JOURNEYS_PATH} className={inlineLink}>
                 Safe and Sound Journeys
               </a>
               , sound journeys where live music holds the container for inner
@@ -673,26 +478,7 @@ export default function OnePage() {
 
       <NotifyDialog eventTitle={notifyFor} onClose={() => setNotifyFor(null)} />
 
-      <footer className="border-t border-bone/10 py-12 px-6 text-center">
-        {newsletterEnabled && (
-          <div className="mb-10">
-            <p className="font-body text-bone/60 text-sm mb-4">
-              Stay in the loop
-            </p>
-            <NewsletterForm compact />
-          </div>
-        )}
-        <Socials />
-        <a
-          href={`mailto:${EMAIL}`}
-          className={`${linkClass} inline-block mt-5`}
-        >
-          {EMAIL}
-        </a>
-        <p className="font-body text-bone/35 text-xs mt-6">
-          © {new Date().getFullYear()} Noah Fernandes · KvK {KVK} · btw {BTW_ID}
-        </p>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
