@@ -200,7 +200,8 @@ export function SiteHeader({
 }: {
   page: "home" | "journeys";
   showEvents?: boolean;
-  cta: { label: string; href: string };
+  // shortLabel is shown on phones, where the bar has little room
+  cta: { label: string; shortLabel?: string; href: string };
 }) {
   const [open, setOpen] = useState(false);
   const nav =
@@ -232,7 +233,7 @@ export function SiteHeader({
     <>
       <header className="fixed top-0 inset-x-0 z-50 bg-bark/70 backdrop-blur-md border-b border-bone/10">
         <nav className="mx-auto max-w-5xl px-6 h-16 flex items-center justify-between">
-          <a href="/" className="font-display italic text-lg text-bone">
+          <a href="/" className="font-display italic text-lg text-bone whitespace-nowrap">
             Noah Fernandes
           </a>
           <div className="flex items-center gap-6">
@@ -251,7 +252,14 @@ export function SiteHeader({
               {...external(cta.href)}
               className="rounded-full border border-ochre/70 text-ochre font-body text-xs uppercase tracking-[0.2em] px-4 py-2 hover:bg-ochre hover:text-bark transition-colors whitespace-nowrap"
             >
-              {cta.label}
+              {cta.shortLabel ? (
+                <>
+                  <span className="sm:hidden">{cta.shortLabel}</span>
+                  <span className="hidden sm:inline">{cta.label}</span>
+                </>
+              ) : (
+                cta.label
+              )}
             </a>
             <button
               type="button"

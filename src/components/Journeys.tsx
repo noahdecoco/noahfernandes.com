@@ -12,7 +12,8 @@ import {
   primaryButton,
   useScrollToHash,
 } from "./site";
-import heroImage from "../assets/bg-offerings.jpg";
+import heroImage from "../assets/journey-room.jpg";
+import sessionImage from "../assets/journey-session.jpg";
 import founderImage from "../assets/noah-tree.jpg";
 import NewsletterForm, { newsletterEnabled } from "./NewsletterForm";
 import { useEvents, type EventItem } from "./events";
@@ -137,14 +138,14 @@ export default function Journeys() {
     <div className="min-h-screen bg-bark text-bone">
       <SiteHeader
         page="journeys"
-        cta={{ label: "Join a journey", href: "#upcoming" }}
+        cta={{ label: "Join a journey", shortLabel: "Join", href: "#upcoming" }}
       />
 
       {/* hero */}
       <section className="relative min-h-[85svh] flex items-end overflow-hidden">
         <img
           src={heroImage}
-          alt="A bright room laid out with mats and cushions for a sound journey"
+          alt="A canal-side room set up for a sound journey, with singing bowls, chimes, a guitar and mats"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bark/60 via-bark/50 to-bark" />
@@ -222,6 +223,12 @@ export default function Journeys() {
         glow="radial-gradient(ellipse 60% 55% at 15% 60%, rgba(62,58,94,0.32), transparent 70%)"
       >
         <SectionTitle kicker="What a journey is like">What to Expect</SectionTitle>
+        <img
+          src={sessionImage}
+          alt="Noah sitting beside someone resting under a blanket after a private journey, among plants and a drum"
+          loading="lazy"
+          className="w-full max-w-4xl mx-auto aspect-[16/9] object-cover rounded-2xl mb-14 sm:mb-16"
+        />
         <ol className="max-w-3xl mx-auto space-y-10">
           {STEPS.map((s, i) => (
             <li key={s.title} className="flex gap-6 sm:gap-8">
