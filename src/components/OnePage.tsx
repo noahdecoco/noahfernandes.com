@@ -42,10 +42,6 @@ const OFFERINGS: {
   link?: { label: string; href: string };
 }[] = [
   {
-    title: "Ecstatic Dance & Festivals",
-    body: "Live, looped and improvised sets for ecstatic dances, festivals and venues, carrying the crowd from stillness to release and back again.",
-  },
-  {
     title: "Sound Journeys",
     body: "Immersive, slowly unfolding soundscapes for sound journeys, guiding people inward for deep rest and self-discovery. I also host my own.",
     link: { label: "Safe and Sound Journeys", href: SSJ_URL },
@@ -53,6 +49,10 @@ const OFFERINGS: {
   {
     title: "Retreats & Ceremony",
     body: "Live music for wellness retreats and ceremonies, played alongside facilitators to support people as they go deeper within.",
+  },
+  {
+    title: "Ecstatic Dance & Festivals",
+    body: "Live, looped and improvised sets for ecstatic dances, festivals and venues, carrying the crowd from stillness to release and back again.",
   },
   {
     title: "Tribe Sessions",
@@ -376,8 +376,8 @@ export default function OnePage() {
             Noah Fernandes
           </h1>
           <p className="font-body text-bone/85 text-base sm:text-xl leading-relaxed mt-8 max-w-2xl mx-auto">
-            Organic, evolving music created in the moment with instruments
-            collected from around the world.
+            Organic, evolving music created in the moment with real
+            instruments collected from around the world.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
             <a href="#contact" className={`${primaryButton} w-full sm:w-auto`}>
@@ -606,8 +606,8 @@ export default function OnePage() {
               journey inward, or something in between.
             </p>
             <p>
-              I offer my music at ecstatic dances and festivals, sound
-              journeys, retreats and ceremonies. In 2024 I founded{" "}
+              I offer my music at sound journeys, retreats and ceremonies,
+              ecstatic dances and festivals. In 2024 I founded{" "}
               <a
                 href={SSJ_URL}
                 target="_blank"
