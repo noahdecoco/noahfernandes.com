@@ -15,6 +15,7 @@ const EMAIL = "hello@noahfernandes.com";
 const KVK = "80492827";
 const BTW_ID = "NL003447542B70";
 const SPOTIFY_ARTIST_ID = "5p3IIXsYQPHxCrtggdRAJ6";
+const SSJ_URL = "https://hipsy.nl/safeandsoundjourneys";
 
 // YouTube video IDs (the part after watch?v= in the link).
 // the cover is a frame from the middle of the video (maxres1/2/3 = early/middle/late),
@@ -35,14 +36,19 @@ const SOCIALS = [
   { label: "Instagram", href: "https://www.instagram.com/sounds.like.noah/" },
 ];
 
-const OFFERINGS = [
+const OFFERINGS: {
+  title: string;
+  body: string;
+  link?: { label: string; href: string };
+}[] = [
   {
     title: "Ecstatic Dance & Festivals",
     body: "Live, looped and improvised sets for ecstatic dances, festivals and venues, carrying the crowd from stillness to release and back again.",
   },
   {
     title: "Sound Journeys",
-    body: "Immersive, slowly unfolding soundscapes for sound journeys, guiding people inward for deep rest and self-discovery.",
+    body: "Immersive, slowly unfolding soundscapes for sound journeys, guiding people inward for deep rest and self-discovery. I also host my own.",
+    link: { label: "Safe and Sound Journeys", href: SSJ_URL },
   },
   {
     title: "Retreats & Ceremony",
@@ -66,7 +72,29 @@ const OFFERINGS = [
   // },
 ];
 
-const FAQS = [
+// short quotes from Safe and Sound Journeys reviews on Hipsy
+const REVIEWS = [
+  {
+    quote: "The music Noah makes picks you up and takes you along.",
+    name: "Bas",
+  },
+  {
+    quote: "Noah's music and singing created a safe space for me.",
+    name: "Ine",
+  },
+  {
+    quote:
+      "Music and vibrations are such a powerful f*cking medicine. Wow, I felt alive.",
+    name: "Thomas",
+  },
+  {
+    quote:
+      "One of the most powerful breathwork and sound journeys I've experienced.",
+    name: "Faried",
+  },
+];
+
+const FAQS: { q: string; a: ReactNode }[] = [
   {
     q: "What kind of music do you play?",
     a: "Mostly live looping, layering sounds in the moment. Every set is shaped by the room, so no two are the same.",
@@ -89,7 +117,22 @@ const FAQS = [
   },
   {
     q: "Do you consider plant medicine a drug?",
-    a: "No. When plant medicine is used consciously, with intention and in a held ceremonial setting, I see it as medicine, not a drug.",
+    a: (
+      <>
+        No. When plant medicine is used consciously, with intention and in a
+        held ceremonial setting, I see it as medicine, not a drug. Through{" "}
+        <a
+          href={SSJ_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4 decoration-1 hover:text-ochre transition-colors"
+        >
+          Safe and Sound Journeys
+        </a>
+        , I occasionally hold gentle ceremonies with truffle tea, which is
+        legal in the Netherlands.
+      </>
+    ),
   },
   {
     q: "How do I hear your music first?",
@@ -365,6 +408,16 @@ export default function OnePage() {
               <p className="font-body text-bone/75 text-base leading-relaxed mt-4">
                 {o.body}
               </p>
+              {o.link && (
+                <a
+                  href={o.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-5 font-body text-ochre text-sm hover:text-bone transition-colors"
+                >
+                  {o.link.label} →
+                </a>
+              )}
             </div>
           ))}
         </div>
@@ -459,6 +512,37 @@ export default function OnePage() {
         </p>
       </Section>
 
+      {/* reviews: what people say after a journey */}
+      <Section
+        id="reviews"
+        padding="py-20 sm:py-24"
+        glow="radial-gradient(ellipse 50% 60% at 85% 30%, rgba(201,150,44,0.16), transparent 70%), radial-gradient(ellipse 45% 50% at 10% 85%, rgba(74,93,58,0.22), transparent 70%)"
+      >
+        <SectionTitle kicker="From Safe and Sound Journeys">Kind Words</SectionTitle>
+        <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2 max-w-4xl mx-auto">
+          {REVIEWS.map((r) => (
+            <figure key={r.name} className="text-center">
+              <blockquote className="font-display italic text-bone text-xl sm:text-2xl leading-snug">
+                “{r.quote}”
+              </blockquote>
+              <figcaption className="font-body text-ochre/80 text-xs uppercase tracking-[0.25em] mt-4">
+                {r.name}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <p className="text-center mt-12">
+          <a
+            href={SSJ_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={linkClass}
+          >
+            Read all reviews on Hipsy
+          </a>
+        </p>
+      </Section>
+
       {/* listen: studio recordings, deliberately quieter than the live videos */}
       <Section id="listen" image={listenImage} overlay="bg-bark/85" padding="py-20 sm:py-24">
         <SectionTitle kicker="Studio recordings">Listen</SectionTitle>
@@ -523,7 +607,17 @@ export default function OnePage() {
             </p>
             <p>
               I offer my music at ecstatic dances and festivals, sound
-              journeys, retreats and ceremonies. As a facilitator, I also guide
+              journeys, retreats and ceremonies. In 2024 I founded{" "}
+              <a
+                href={SSJ_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-bone underline underline-offset-4 decoration-1 decoration-ochre/60 hover:text-ochre transition-colors"
+              >
+                Safe and Sound Journeys
+              </a>
+              , sound journeys where live music holds the container for inner
+              healing. As a facilitator, I also guide
               Tribe Sessions, workshops where people find their own sound and
               make music together. For me, it's all about connection,
               through the beautiful power of music and sound: with ourselves,
