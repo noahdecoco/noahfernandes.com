@@ -30,14 +30,6 @@ const JOURNEYS = [
     body: "Conscious breathing, guided together with a breathwork facilitator, while the music follows the breath from the first inhale to the quiet afterwards.",
   },
   {
-    title: "Parts Work",
-    body: "Workshops with Internal Family Systems (IFS), where we gently meet the different parts of ourselves, with live music to soften the way in. Also for couples and relationships.",
-  },
-  {
-    title: "Sound of Men",
-    body: "Circles for men to ground, resonate and express, using voice, rhythm and the body as an instrument.",
-  },
-  {
     title: "Ceremony",
     body: "Occasionally, a gentle ceremony with truffle tea, held with preparation, live music and integration. Always optional, and legal in the Netherlands.",
   },
@@ -130,11 +122,11 @@ const FAQS: { q: string; a: ReactNode }[] = [
   },
 ];
 
-// journeys are the events whose type or title sounds like one; dance sets stay on the home page
+// the sheet's Type column decides where an event shows up.
+// these types appear here; Set, Workshop and Festival only on the home page.
+const JOURNEY_TYPES = ["journey", "ceremony", "breathwork"];
 const isJourney = (e: EventItem) =>
-  /journey|ceremony|breath|parts|ifs|circle|sound of men/i.test(
-    `${e.type} ${e.title}`,
-  );
+  JOURNEY_TYPES.includes(e.type.trim().toLowerCase());
 
 export default function Journeys() {
   const events = useEvents().filter(isJourney);
@@ -206,7 +198,7 @@ export default function Journeys() {
         glow="radial-gradient(ellipse 50% 50% at 85% 20%, rgba(201,150,44,0.14), transparent 70%)"
       >
         <SectionTitle kicker="Ways to journey">Journeys</SectionTitle>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 max-w-4xl mx-auto">
           {JOURNEYS.map((j) => (
             <div
               key={j.title}

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 // paste the "Publish to web" CSV link of the events Google Sheet here.
 // columns (row 1): Date | Time | Title | Type | Venue | City | Link | Publish
 // Date must be year-month-day, e.g. 2026-11-14. Past events are hidden automatically.
+// Type: Journey, Ceremony, Breathwork, Set, Workshop or Festival. The first three
+// also appear on the Journeys page; every event appears on the home page.
 // Publish: a checkbox (or yes / x); unticked rows stay hidden. Without the column, every row shows.
 export const EVENTS_CSV_URL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vRkrw5tC0iPbw0SYta-B7U5vplT6OZPAaTdH_z1Nmvz2PVqNqKO-xTMRPbQCNo6ZeMrui-AGoqMK-a8/pub?gid=0&single=true&output=csv";
