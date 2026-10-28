@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { siInstagram, siSpotify, siYoutube } from "simple-icons";
 import NewsletterForm, { newsletterEnabled } from "./NewsletterForm";
 import type { EventItem } from "./events";
 
@@ -14,9 +15,18 @@ export const SOCIALS = [
   {
     label: "Spotify",
     href: `https://open.spotify.com/artist/${SPOTIFY_ARTIST_ID}`,
+    icon: siSpotify.path,
   },
-  { label: "YouTube", href: "https://www.youtube.com/@sounds-like-noah" },
-  { label: "Instagram", href: "https://www.instagram.com/sounds.like.noah/" },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@sounds-like-noah",
+    icon: siYoutube.path,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/sounds.like.noah/",
+    icon: siInstagram.path,
+  },
 ];
 
 // links start with "/" so they work from every page: on the home page they
@@ -131,10 +141,19 @@ export function Section({
 
 export function Socials() {
   return (
-    <div className="flex items-center justify-center gap-6">
+    <div className="flex items-center justify-center gap-7">
       {SOCIALS.map((s) => (
-        <a key={s.label} href={s.href} {...external(s.href)} className={linkClass}>
-          {s.label}
+        <a
+          key={s.label}
+          href={s.href}
+          {...external(s.href)}
+          aria-label={s.label}
+          title={s.label}
+          className="text-bone/60 hover:text-ochre transition-colors duration-200"
+        >
+          <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current" aria-hidden="true">
+            <path d={s.icon} />
+          </svg>
         </a>
       ))}
     </div>
