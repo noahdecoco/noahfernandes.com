@@ -1,10 +1,6 @@
-import { useState } from "react";
 import FaqSection from "../../components/FaqSection";
-import NotifyDialog from "../../components/forms/NotifyDialog";
+import PageLayout from "../../components/layout/PageLayout";
 import ReviewsSection from "../../components/ReviewsSection";
-import SiteFooter from "../../components/layout/SiteFooter";
-import SiteHeader from "../../components/layout/SiteHeader";
-import { useScrollToHash } from "../../hooks/useScrollToHash";
 import { useEvents } from "../../hooks/useEvents";
 import type { EventItem } from "../../lib/events";
 import { FAQS, JOURNEY_TYPES, REVIEWS } from "./content";
@@ -19,21 +15,18 @@ const isJourney = (e: EventItem) =>
   JOURNEY_TYPES.includes(e.type.trim().toLowerCase());
 
 export default function JourneysPage() {
-  const events = useEvents().filter(isJourney);
-  const [notifyFor, setNotifyFor] = useState<string | null>(null);
-  useScrollToHash(events.length);
+  const journeys = useEvents().filter(isJourney);
 
   return (
-    <div className="min-h-screen bg-bark text-bone">
-      <SiteHeader
-        page="journeys"
-        cta={{ label: "Join a journey", shortLabel: "Join", href: "#upcoming" }}
-      />
+    <PageLayout
+      page="journeys"
+      cta={{ label: "Join a journey", shortLabel: "Join", href: "#upcoming" }}
+    >
       <Hero />
       <Intro />
       <JourneyTypes />
       <WhatToExpect />
-      <UpcomingJourneys events={events} onNotify={setNotifyFor} />
+      <UpcomingJourneys events={journeys} />
       <ReviewsSection
         kicker="From people who journeyed"
         reviews={REVIEWS}
@@ -41,8 +34,6 @@ export default function JourneysPage() {
       />
       <FaqSection title="Questions" faqs={FAQS} />
       <Guide />
-      <NotifyDialog eventTitle={notifyFor} onClose={() => setNotifyFor(null)} />
-      <SiteFooter />
-    </div>
+    </PageLayout>
   );
 }

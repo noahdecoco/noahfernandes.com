@@ -26,7 +26,7 @@ src/
   styles.ts                shared Tailwind classes
   pages/<page>/            page component, its content and its sections
   components/              pieces used on both pages
-    layout/                header, phone menu, footer, section wrappers
+    layout/                page frame, header, phone menu, footer, section wrappers
     forms/                 contact, newsletter and notify pop-up
   hooks/                   events, scroll-to-section, active menu item
   lib/                     events sheet, CSV parsing, link helpers

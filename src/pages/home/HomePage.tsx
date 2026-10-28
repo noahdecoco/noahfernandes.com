@@ -1,11 +1,7 @@
-import { useState } from "react";
 import FaqSection from "../../components/FaqSection";
 import { newsletterEnabled } from "../../components/forms/NewsletterForm";
-import NotifyDialog from "../../components/forms/NotifyDialog";
+import PageLayout from "../../components/layout/PageLayout";
 import ReviewsSection from "../../components/ReviewsSection";
-import SiteFooter from "../../components/layout/SiteFooter";
-import SiteHeader from "../../components/layout/SiteHeader";
-import { useScrollToHash } from "../../hooks/useScrollToHash";
 import { useEvents } from "../../hooks/useEvents";
 import { FAQS, REVIEWS } from "./content";
 import About from "./sections/About";
@@ -19,19 +15,12 @@ import Watch from "./sections/Watch";
 
 export default function HomePage() {
   const events = useEvents();
-  const [notifyFor, setNotifyFor] = useState<string | null>(null);
-  useScrollToHash(events.length);
 
   return (
-    <div className="min-h-screen bg-bark text-bone">
-      <SiteHeader
-        page="home"
-        showEvents={events.length > 0}
-        cta={{ label: "Book", href: "/#contact" }}
-      />
+    <PageLayout page="home" cta={{ label: "Book", href: "/#contact" }}>
       <Hero />
       <Offerings />
-      {events.length > 0 && <Events events={events} onNotify={setNotifyFor} />}
+      {events.length > 0 && <Events events={events} />}
       <Watch />
       <ReviewsSection kicker="From Safe and Sound Journeys" reviews={REVIEWS} />
       <Listen />
@@ -39,8 +28,6 @@ export default function HomePage() {
       <About />
       <FaqSection title="FAQ" faqs={FAQS} />
       <Contact />
-      <NotifyDialog eventTitle={notifyFor} onClose={() => setNotifyFor(null)} />
-      <SiteFooter />
-    </div>
+    </PageLayout>
   );
 }

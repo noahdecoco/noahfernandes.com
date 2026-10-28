@@ -4,6 +4,10 @@ import { useActiveSection } from "../../hooks/useActiveSection";
 import { external } from "../../lib/links";
 import MobileMenu from "./MobileMenu";
 
+// the one button on the right of the bar; shortLabel is shown on phones,
+// where the bar has little room
+export type HeaderCta = { label: string; shortLabel?: string; href: string };
+
 export default function SiteHeader({
   page,
   showEvents = false,
@@ -11,15 +15,12 @@ export default function SiteHeader({
 }: {
   page: "home" | "journeys";
   showEvents?: boolean;
-  // shortLabel is shown on phones, where the bar has little room
-  cta: { label: string; shortLabel?: string; href: string };
+  cta: HeaderCta;
 }) {
   const [open, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
-  const nav =
-    page === "home" && showEvents
-      ? [{ label: "Events", href: "/#events" }, ...NAV]
-      : NAV;
+  // the same menu on every page; Events appears whenever something is coming up
+  const nav = showEvents ? [{ label: "Events", href: "/#events" }, ...NAV] : NAV;
   const sectionIds = nav
     .filter((n) => n.href.startsWith("/#"))
     .map((n) => n.href.slice(2));

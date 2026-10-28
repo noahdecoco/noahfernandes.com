@@ -9,10 +9,8 @@ import { ghostButton } from "../../../styles";
 // always shown, because the header button points here
 export default function UpcomingJourneys({
   events,
-  onNotify,
 }: {
   events: EventItem[];
-  onNotify: (title: string) => void;
 }) {
   return (
     <Section
@@ -22,7 +20,7 @@ export default function UpcomingJourneys({
     >
       <SectionTitle kicker="Come and join">Upcoming Journeys</SectionTitle>
       {events.length > 0 ? (
-        <EventList events={events} onNotify={onNotify} />
+        <EventList events={events} />
       ) : (
         <div className="max-w-xl mx-auto text-center">
           <p className="font-body text-bone/75 text-base sm:text-lg leading-relaxed">
