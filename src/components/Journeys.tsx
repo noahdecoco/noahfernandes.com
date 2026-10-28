@@ -12,9 +12,9 @@ import {
   primaryButton,
   useScrollToHash,
 } from "./site";
-import heroImage from "../assets/journey-room.jpg";
-import sessionImage from "../assets/journey-session.jpg";
-import founderImage from "../assets/noah-tree.jpg";
+import heroImage from "../assets/journey-room-instruments.jpg";
+import sessionImage from "../assets/private-journey.jpg";
+import founderImage from "../assets/noah-beech-tree.jpg";
 import NewsletterForm, { newsletterEnabled } from "./NewsletterForm";
 import { useEvents, type EventItem } from "./events";
 import NotifyDialog from "./NotifyDialog";

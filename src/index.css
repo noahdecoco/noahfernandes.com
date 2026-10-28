@@ -24,18 +24,3 @@ body {
 #root {
     min-height: 100vh;
 }
-
-/* shared keyframes, referenced via Tailwind arbitrary animate-[...] values */
-@keyframes ssj-scroll {
-    0% {
-        opacity: 0;
-        transform: translateY(0);
-    }
-    40% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-}

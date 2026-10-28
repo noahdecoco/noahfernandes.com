@@ -17,12 +17,12 @@ import {
   primaryButton,
   useScrollToHash,
 } from "./site";
-import heroImage from "../assets/bg-hero.jpg";
-import offeringsImage from "../assets/bg-offerings.jpg";
-import watchImage from "../assets/noah-background.jpg";
-import contactImage from "../assets/bg-contact.jpg";
-import listenImage from "../assets/bg-listen.jpg";
-import aboutImage from "../assets/noah-about.jpg";
+import heroImage from "../assets/goa-palms-dusk.jpg";
+import offeringsImage from "../assets/journey-room-mats.jpg";
+import watchImage from "../assets/home-studio-setup.jpg";
+import contactImage from "../assets/goa-river-palms.jpg";
+import listenImage from "../assets/instruments-on-rug.jpg";
+import aboutImage from "../assets/noah-flute-sunrise.jpg";
 import ContactForm from "./ContactForm";
 import NewsletterForm, { newsletterEnabled } from "./NewsletterForm";
 import { useEvents } from "./events";
