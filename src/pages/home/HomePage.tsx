@@ -20,7 +20,7 @@ export default function HomePage() {
     <PageLayout page="home" cta={{ label: "Book", href: "/#contact" }}>
       <Hero />
       <Offerings />
-      {events.length > 0 && <Events events={events} />}
+      <Events events={events} />
       <Watch />
       <ReviewsSection kicker="From Safe and Sound Journeys" reviews={REVIEWS} />
       <Listen />

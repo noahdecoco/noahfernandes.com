@@ -8,6 +8,7 @@ export const SPOTIFY_ARTIST_ID = "5p3IIXsYQPHxCrtggdRAJ6";
 export const YOUTUBE_URL = "https://www.youtube.com/@sounds-like-noah";
 export const HIPSY_URL = "https://hipsy.nl/safeandsoundjourneys";
 export const JOURNEYS_PATH = "/journeys/";
+export const INSTAGRAM_URL = "https://www.instagram.com/sounds.like.noah/";
 
 export const SOCIALS = [
   {
@@ -22,7 +23,7 @@ export const SOCIALS = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/sounds.like.noah/",
+    href: INSTAGRAM_URL,
     icon: siInstagram.path,
   },
 ];
@@ -30,6 +31,7 @@ export const SOCIALS = [
 // links start with "/" so they work from every page: on the home page they
 // just scroll, from another page they go home and land on the section
 export const NAV = [
+  { label: "Events", href: "/#events" },
   { label: "Watch", href: "/#watch" },
   { label: "Listen", href: "/#listen" },
   { label: "Journeys", href: JOURNEYS_PATH },
@@ -37,6 +39,7 @@ export const NAV = [
 ];
 
 export const FOOTER_LINKS = [
+  { label: "Events", href: "/#events" },
   { label: "Watch", href: "/#watch" },
   { label: "Listen", href: "/#listen" },
   { label: "Journeys", href: JOURNEYS_PATH },

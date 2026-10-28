@@ -15,7 +15,7 @@ const isJourney = (e: EventItem) =>
   JOURNEY_TYPES.includes(e.type.trim().toLowerCase());
 
 export default function JourneysPage() {
-  const journeys = useEvents().filter(isJourney);
+  const journeys = useEvents()?.filter(isJourney) ?? null;
 
   return (
     <PageLayout

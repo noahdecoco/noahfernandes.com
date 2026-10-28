@@ -10,18 +10,15 @@ export type HeaderCta = { label: string; shortLabel?: string; href: string };
 
 export default function SiteHeader({
   page,
-  showEvents = false,
   cta,
 }: {
   page: "home" | "journeys";
-  showEvents?: boolean;
   cta: HeaderCta;
 }) {
   const [open, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
-  // the same menu on every page; Events appears whenever something is coming up
-  const nav = showEvents ? [{ label: "Events", href: "/#events" }, ...NAV] : NAV;
-  const sectionIds = nav
+  // the same menu on every page, so nothing jumps in or out
+  const sectionIds = NAV
     .filter((n) => n.href.startsWith("/#"))
     .map((n) => n.href.slice(2));
   const activeSection = useActiveSection(sectionIds, page === "home");
@@ -38,7 +35,7 @@ export default function SiteHeader({
             Noah Fernandes
           </a>
           <div className="flex items-center gap-6">
-            {nav.map((n) => (
+            {NAV.map((n) => (
               <a
                 key={n.href}
                 href={n.href}
@@ -86,7 +83,7 @@ export default function SiteHeader({
 
       {open && (
         <MobileMenu
-          links={[...nav, { label: "FAQ", href: "/#faq" }]}
+          links={[...NAV, { label: "FAQ", href: "/#faq" }]}
           isActive={isActive}
           onClose={close}
         />

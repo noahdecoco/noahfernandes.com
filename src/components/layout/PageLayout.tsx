@@ -17,11 +17,11 @@ export default function PageLayout({
 }) {
   const events = useEvents();
   // jump to /#section once the events have loaded and moved things into place
-  useScrollToHash(events.length);
+  useScrollToHash(events);
 
   return (
     <div className="min-h-screen bg-bark text-bone">
-      <SiteHeader page={page} showEvents={events.length > 0} cta={cta} />
+      <SiteHeader page={page} cta={cta} />
       {children}
       <SiteFooter />
     </div>

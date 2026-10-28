@@ -10,7 +10,8 @@ import { ghostButton } from "../../../styles";
 export default function UpcomingJourneys({
   events,
 }: {
-  events: EventItem[];
+  // null while the sheet is loading
+  events: EventItem[] | null;
 }) {
   return (
     <Section
@@ -19,7 +20,7 @@ export default function UpcomingJourneys({
       glow="radial-gradient(ellipse 50% 60% at 15% 40%, rgba(201,150,44,0.18), transparent 70%), radial-gradient(ellipse 45% 50% at 90% 80%, rgba(74,93,58,0.25), transparent 70%)"
     >
       <SectionTitle kicker="Come and join">Upcoming Journeys</SectionTitle>
-      {events.length > 0 ? (
+      {events === null ? null : events.length > 0 ? (
         <EventList events={events} />
       ) : (
         <div className="max-w-xl mx-auto text-center">

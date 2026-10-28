@@ -12,14 +12,15 @@ function loadEvents(): Promise<EventItem[]> {
       : fetch(EVENTS_CSV_URL)
           .then((r) => (r.ok ? r.text() : ""))
           .then(toEvents)
-          .catch(() => []); // if the sheet can't be reached the events simply stay hidden
+          .catch(() => []); // if the sheet can't be reached, pages show their "nothing planned" message
   }
   return request;
 }
 
-// upcoming events from the Google Sheet, loaded in the browser
-export function useEvents(): EventItem[] {
-  const [events, setEvents] = useState<EventItem[]>([]);
+// upcoming events from the Google Sheet, loaded in the browser.
+// null while the sheet is still loading, so pages don't flash an empty state.
+export function useEvents(): EventItem[] | null {
+  const [events, setEvents] = useState<EventItem[] | null>(null);
 
   useEffect(() => {
     let cancelled = false;
