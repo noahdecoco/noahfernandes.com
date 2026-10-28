@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import OnePage from "./components/OnePage.tsx";
+import HomePage from "./pages/home/HomePage.tsx";
 
 
 const rootElement = document.getElementById("root");
@@ -12,6 +12,6 @@ if (!rootElement) {
 
 ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
-        <OnePage/>
+        <HomePage/>
     </React.StrictMode>
 );

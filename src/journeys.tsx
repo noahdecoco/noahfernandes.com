@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Journeys from "./components/Journeys.tsx";
+import JourneysPage from "./pages/journeys/JourneysPage.tsx";
 
 const rootElement = document.getElementById("root");
 
@@ -11,6 +11,6 @@ if (!rootElement) {
 
 ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
-        <Journeys/>
+        <JourneysPage/>
     </React.StrictMode>
 );

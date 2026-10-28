@@ -2,19 +2,36 @@
 
 Website of Noah Fernandes. Vite, React and Tailwind, two pages:
 
-- `/` (`index.html`, `src/components/OnePage.tsx`): the main page
-- `/journeys/` (`journeys/index.html`, `src/components/Journeys.tsx`): Safe and Sound Journeys
+- `/` (`index.html`, `src/pages/home/`): the main page
+- `/journeys/` (`journeys/index.html`, `src/pages/journeys/`): Safe and Sound Journeys
 
 ## Where to change things
 
-- **Text, videos, offerings, FAQ:** the constants at the top of `OnePage.tsx` and `Journeys.tsx`
-- **Email, socials, menu, footer, KvK/btw:** `src/components/site.tsx`
-- **Colours and fonts:** `src/index.css`
+- **Videos, offerings, reviews, FAQ, journey types:** `content.tsx` in each page's folder
+- **A section's wording or layout:** `src/pages/<page>/sections/`
+- **Email, socials, menu, footer links, KvK/btw:** `src/config.ts`
+- **Colours and fonts:** `src/index.css`; shared button and link styles in `src/styles.ts`
 - **Page titles and link previews:** `index.html` and `journeys/index.html`
-- **Events:** the Google Sheet (see the comment in `src/components/events.ts`). No rebuild needed.
+- **Events:** the Google Sheet (see the comment in `src/lib/events.ts`). No rebuild needed.
   Type `Journey`, `Ceremony` or `Breathwork` also shows the event on the Journeys page.
-- **Newsletter:** Kit form, `src/components/NewsletterForm.tsx`
-- **Contact form:** Formspree, `src/components/ContactForm.tsx`
+- **Newsletter:** Kit form, `src/components/forms/NewsletterForm.tsx`
+- **Contact form:** Formspree, `src/components/forms/ContactForm.tsx`
+
+## Folders
+
+```
+src/
+  main.tsx, journeys.tsx   entry point of each page
+  config.ts                contact details, links and menus
+  styles.ts                shared Tailwind classes
+  pages/<page>/            page component, its content and its sections
+  components/              pieces used on both pages
+    layout/                header, phone menu, footer, section wrappers
+    forms/                 contact, newsletter and notify pop-up
+  hooks/                   events, scroll-to-section, active menu item
+  lib/                     events sheet, CSV parsing, link helpers
+  assets/                  photos
+```
 
 ## Run and deploy
 
