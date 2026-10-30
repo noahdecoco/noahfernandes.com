@@ -15,7 +15,7 @@ export const JOURNEYS = [
   },
   {
     title: "Ceremony",
-    body: "Occasionally, a gentle ceremony with truffle tea, held with preparation, live music and integration. Always optional, and legal in the Netherlands.",
+    body: "Live music that holds the space in ceremonial settings, from truffle ceremonies (legal in the Netherlands) to cacao circles.",
   },
   {
     title: "Private Journeys",
@@ -50,8 +50,7 @@ export const REVIEWS: Review[] = [
     name: "Faried",
   },
   {
-    quote:
-      "This ceremony was exactly what my body and mind and soul needed.",
+    quote: "This ceremony was exactly what my body and mind and soul needed.",
     name: "Karin",
   },
   {
