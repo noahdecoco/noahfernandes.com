@@ -1,4 +1,4 @@
-import founderImage from "../../../assets/noah-beech-tree.jpg";
+import guideImage from "../../../assets/noah-staff-field.jpg";
 import Section from "../../../components/layout/Section";
 import SectionTitle from "../../../components/layout/SectionTitle";
 import { ghostButton } from "../../../styles";
@@ -13,10 +13,10 @@ export default function Guide() {
       <SectionTitle kicker="Who holds the space">Your Guide</SectionTitle>
       <div className="grid gap-10 md:grid-cols-2 md:gap-14 items-center">
         <img
-          src={founderImage}
-          alt="Noah sitting on a log bench beneath a huge old beech tree"
+          src={guideImage}
+          alt="Noah holding a wooden staff in an open field, looking out over the land"
           loading="lazy"
-          className="w-full max-w-md mx-auto md:max-w-none aspect-[4/5] object-cover rounded-2xl"
+          className="w-full max-w-md mx-auto md:max-w-none aspect-[4/5] object-cover object-[50%_45%] rounded-2xl"
         />
         <div className="font-body text-bone/75 text-base sm:text-lg leading-relaxed space-y-6">
           <p>
