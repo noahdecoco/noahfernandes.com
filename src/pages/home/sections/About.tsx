@@ -20,7 +20,8 @@ export default function About() {
         />
         <div className="font-body text-bone/75 text-base sm:text-lg leading-relaxed space-y-6">
           <p>
-            I'm Noah, born and raised in Goa, India. I create immersive music
+            I'm Noah, born and raised in Goa, India, and based in Amsterdam
+            since 2015. I create immersive music
             with the instruments I've collected from the places I've
             travelled to over the years. My music is live and adaptive, an
             ever-evolving connection between the energy present in me and the
