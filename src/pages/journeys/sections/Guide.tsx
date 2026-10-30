@@ -21,7 +21,7 @@ export default function Guide() {
         <div className="font-body text-bone/75 text-base sm:text-lg leading-relaxed space-y-6">
           <p>
             Safe and Sound Journeys was founded in 2024 by Noah Fernandes, an
-            Amsterdam-based live-looping artist and parts-work (IFS)
+            Amsterdam-based multi-instrumentalist and parts-work (IFS)
             practitioner. He guides the journeys, often together with guest
             facilitators.
           </p>

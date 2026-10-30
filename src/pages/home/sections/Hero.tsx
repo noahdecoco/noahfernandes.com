@@ -17,7 +17,8 @@ export default function Hero() {
 
       <div className="relative w-full mx-auto max-w-5xl px-6 pb-20 sm:pb-28 pt-32 text-center">
         <p className="font-body text-[11px] sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.35em] text-bone/80">
-          Amsterdam-based Live-Looping Artist
+          Multi-instrumentalist &amp;{" "}
+          <span className="whitespace-nowrap">Journey Guide</span>
         </p>
         <h1 className="font-display italic text-bone mt-5 text-5xl sm:text-7xl lg:text-8xl leading-none">
           Noah Fernandes
