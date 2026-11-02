@@ -37,8 +37,9 @@ export default function About() {
             journey inward, or something in between.
           </p>
           <p>
-            I offer my music at sound journeys, retreats and ceremonies, and in
-            live sets for dancing. In 2024 I founded{" "}
+            I play sound journeys, on their own or within breathwork,
+            ceremonies and retreats, and live sets for dancing. In 2024 I
+            founded{" "}
             <a href={JOURNEYS_PATH} className={inlineLink}>
               Safe and Sound Journeys
             </a>

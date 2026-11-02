@@ -27,12 +27,8 @@ export type Offering = {
 export const OFFERINGS: Offering[] = [
   {
     title: "Sound Journeys",
-    body: "Immersive, slowly unfolding soundscapes for sound journeys, guiding people inward for deep rest and self-discovery.",
+    body: "Immersive, slowly unfolding live music that guides people inward, on its own or woven into breathwork, ceremonies and retreats.",
     link: { label: "Safe and Sound Journeys", href: JOURNEYS_PATH },
-  },
-  {
-    title: "Retreats & Ceremony",
-    body: "Live music for wellness retreats and ceremonies, played alongside facilitators to support people as they go deeper within.",
   },
   {
     title: "Live Sets",

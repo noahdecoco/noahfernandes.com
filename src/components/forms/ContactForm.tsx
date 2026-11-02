@@ -5,8 +5,7 @@ import { useState, type FormEvent } from "react";
 const FORMSPREE_ID = "mvkzdzqn";
 
 const EVENT_TYPES = [
-  "Sound Journey",
-  "Retreat or ceremony",
+  "Sound journey (incl. retreat or ceremony)",
   "Live set (dance, festival, venue)",
   "Tribe Session (workshop)",
   "Private session",

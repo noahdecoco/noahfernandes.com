@@ -8,11 +8,11 @@ export default function Offerings() {
   return (
     <Section id="offerings" image={offeringsImage} overlay="bg-bark/85">
       <SectionTitle kicker="Where my music lives">Offerings</SectionTitle>
-      <div className="grid gap-6 sm:grid-cols-2 max-w-4xl mx-auto">
+      <div className="grid gap-6 md:grid-cols-3">
         {OFFERINGS.map((o) => (
           <div
             key={o.title}
-            className="rounded-2xl border border-bone/15 bg-bark/40 backdrop-blur-sm p-8 sm:odd:last:col-span-2"
+            className="rounded-2xl border border-bone/15 bg-bark/40 backdrop-blur-sm p-8"
           >
             <h3 className="font-body text-ochre text-sm uppercase tracking-[0.25em]">
               {o.title}
