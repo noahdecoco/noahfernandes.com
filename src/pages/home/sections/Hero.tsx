@@ -1,8 +1,11 @@
 import heroImage from "../../../assets/goa-palms-dusk.jpg";
 import Socials from "../../../components/Socials";
 import { ghostButton, primaryButton } from "../../../styles";
+import { PARALLAX_IMAGE, useParallax } from "../../../hooks/useParallax";
 
 export default function Hero() {
+  const imageRef = useParallax<HTMLImageElement>(0.25);
+
   return (
     <section
       id="top"
@@ -11,7 +14,8 @@ export default function Hero() {
       <img
         src={heroImage}
         alt="Palm trees reflected in still water at dusk in Goa"
-        className="absolute inset-0 w-full h-full object-cover"
+        ref={imageRef}
+        className={PARALLAX_IMAGE}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-bark/40 via-bark/30 to-bark" />
 

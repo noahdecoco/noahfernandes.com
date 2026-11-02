@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { PARALLAX_IMAGE, useParallax } from "../../hooks/useParallax";
 
 // fine film grain laid over plain sections so the brown doesn't read as flat
 const GRAIN =
@@ -23,6 +24,8 @@ export default function Section({
   glow?: string;
   children: ReactNode;
 }) {
+  const imageRef = useParallax<HTMLImageElement>();
+
   return (
     <section
       id={id}
@@ -31,10 +34,11 @@ export default function Section({
       {image && (
         <>
           <img
+            ref={imageRef}
             src={image}
             alt=""
             loading="lazy"
-            className="absolute inset-0 w-full h-full object-cover"
+            className={PARALLAX_IMAGE}
           />
           <div className={`absolute inset-0 ${overlay}`} />
         </>

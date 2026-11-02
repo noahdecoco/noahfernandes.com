@@ -1,13 +1,17 @@
 import heroImage from "../../../assets/journey-room-instruments.jpg";
 import { ghostButton, primaryButton } from "../../../styles";
+import { PARALLAX_IMAGE, useParallax } from "../../../hooks/useParallax";
 
 export default function Hero() {
+  const imageRef = useParallax<HTMLImageElement>(0.25);
+
   return (
     <section className="relative min-h-[85svh] flex items-end overflow-hidden">
       <img
         src={heroImage}
         alt="A canal-side room set up for a sound journey, with singing bowls, chimes, a guitar and mats"
-        className="absolute inset-0 w-full h-full object-cover"
+        ref={imageRef}
+        className={PARALLAX_IMAGE}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-bark/60 via-bark/50 to-bark" />
 
