@@ -35,12 +35,12 @@ export const OFFERINGS: Offering[] = [
     body: "Live music for wellness retreats and ceremonies, played alongside facilitators to support people as they go deeper within.",
   },
   {
-    title: "Ecstatic Dance & Festivals",
-    body: "Live, looped and improvised sets for ecstatic dances, festivals and venues, carrying the crowd from stillness to release and back again.",
+    title: "Live Sets",
+    body: "Improvised sets made for dancing and movement, at ecstatic dances, festivals and venues, carrying the people from stillness to release and back again.",
   },
   {
     title: "Tribe Sessions",
-    body: "Workshops I facilitate, where we discover the sound each of us carries and learn to resonate as one, through voice, body percussion and unplugged instruments.",
+    body: "Workshops where we discover the sound each of us carries and learn to resonate as one, through voice, body percussion and unplugged instruments.",
   },
 ];
 
@@ -69,11 +69,11 @@ export const REVIEWS: Review[] = [
 export const FAQS: Faq[] = [
   {
     q: "What kind of music do you play?",
-    a: "Mostly live looping, layering sounds in the moment. Every set is shaped by the room, so no two are the same.",
+    a: "Mostly live looping, layering sounds in the moment. Every set is shaped by the people who are there, so no two are the same.",
   },
   {
     q: "Can I book you for my event or retreat?",
-    a: "Yes. Fill in the form below with the date, location, type of session and number of people, and we'll take it from there. I can also pair a set with a workshop, so your group gets to dance to the music and make it too.",
+    a: "Yes. Fill in the form below with the date, location, type of session and number of people, and we'll take it from there. I can also pair a sound journey with a Tribe Session, so your group gets to journey with the music and make it too.",
   },
   {
     q: "Do you offer private sessions?",

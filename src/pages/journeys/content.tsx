@@ -7,7 +7,7 @@ import { inlineLink } from "../../styles";
 export const JOURNEYS = [
   {
     title: "Sound Journeys",
-    body: "Lie down, close your eyes and let live music carry you inward. Voice, flute, drums and instruments from around the world, played in the moment for the people in the room.",
+    body: "Lie down, close your eyes and let live music carry you inward. Voice, flute, drums and instruments from around the world, played in the moment for the people who are there.",
   },
   {
     title: "Breathwork & Sound",

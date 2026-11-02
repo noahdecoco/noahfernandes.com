@@ -5,10 +5,10 @@ import { useState, type FormEvent } from "react";
 const FORMSPREE_ID = "mvkzdzqn";
 
 const EVENT_TYPES = [
-  "Ecstatic dance or festival",
   "Sound Journey",
   "Retreat or ceremony",
-  "Workshop",
+  "Live set (dance, festival, venue)",
+  "Tribe Session (workshop)",
   "Private session",
   "Something else",
 ];
@@ -144,7 +144,7 @@ export default function ContactForm({ email }: { email: string }) {
           name="Message"
           required
           rows={5}
-          placeholder="The event, the people, the feeling you want in the room…"
+          placeholder="The event, the people, the feeling you want to create…"
           className={fieldClass}
         />
       </div>

@@ -11,7 +11,7 @@ export default function Contact() {
       <SectionTitle kicker="Let's work together">Book</SectionTitle>
       <div className="max-w-2xl mx-auto text-center">
         <p className="font-body text-bone/80 text-base sm:text-lg leading-relaxed">
-          Hosting a dance, retreat, session or ceremony? Tell me about it and
+          Hosting a journey, a dance, a retreat or a workshop? Tell me about it and
           I'll get back to you.
         </p>
         <div className="mt-10 rounded-2xl border border-bone/15 bg-bark/50 backdrop-blur-sm p-6 sm:p-10">

@@ -21,9 +21,10 @@ export default function About() {
         <div className="font-body text-bone/75 text-base sm:text-lg leading-relaxed space-y-6">
           <p>
             I'm Noah, born and raised in Goa, India, and based in Amsterdam
-            since 2015. I create immersive music
-            with the instruments I've collected from the places I've
-            travelled to over the years. My music is live and adaptive, an
+            since 2015. I create immersive music with the instruments I've
+            collected from the places I've travelled to over the years, and
+            the ones I was born with: my voice, my hands, my body. My music is
+            live and adaptive, an
             ever-evolving connection between the energy present in me and the
             space.
           </p>
@@ -36,8 +37,8 @@ export default function About() {
             journey inward, or something in between.
           </p>
           <p>
-            I offer my music at sound journeys, retreats and ceremonies,
-            ecstatic dances and festivals. In 2024 I founded{" "}
+            I offer my music at sound journeys, retreats and ceremonies, and in
+            live sets for dancing. In 2024 I founded{" "}
             <a href={JOURNEYS_PATH} className={inlineLink}>
               Safe and Sound Journeys
             </a>
