@@ -11,7 +11,7 @@ export default function Watch() {
 
   return (
     <Section id="watch" image={watchImage} overlay="bg-bark/85">
-      <SectionTitle kicker="Live looping sessions">Watch</SectionTitle>
+      <SectionTitle kicker="Live sessions">Watch</SectionTitle>
       <VideoCard {...featured} featured />
       <div className="grid gap-6 sm:grid-cols-3 mt-6">
         {moreVideos.map((v) => (

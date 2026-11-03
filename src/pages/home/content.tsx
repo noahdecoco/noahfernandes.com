@@ -14,7 +14,7 @@ export type Video = { id: string; title: string; frame?: string };
 export const VIDEOS: Video[] = [
   { id: "oRT6zA0aBbU", title: "Calm your anxious mind" },
   { id: "QKBYHoLNZ9U", title: "A Sound Journey from Ashram to Jungle" },
-  { id: "BHkwrfycJvU", title: "Chill and groovy live looping session" },
+  { id: "Lhbb1zT3tX4", title: "Guitar melody for the spring sun" },
   { id: "2OI-pz6DttQ", title: "Healing Bansuri Melodies" },
 ];
 
