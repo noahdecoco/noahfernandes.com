@@ -26,9 +26,9 @@ export default function Hero() {
         <h1 className="font-display italic text-bone mt-5 text-5xl sm:text-7xl lg:text-8xl leading-none">
           Noah Fernandes
         </h1>
-        <p className="font-body text-bone/85 text-base sm:text-xl leading-relaxed mt-8 max-w-2xl mx-auto">
-          Organic, evolving music made in the moment, with instruments from
-          around the world and the ones we're born with.
+        <p className="font-body text-bone/85 text-base sm:text-xl leading-relaxed text-balance mt-8 max-w-2xl mx-auto">
+          Through rhythm and music, I bring people into stillness, movement
+          and connection.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
           <a href="/#contact" className={`${primaryButton} w-full sm:w-auto`}>
