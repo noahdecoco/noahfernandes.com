@@ -1,4 +1,4 @@
-import sessionImage from "../../../assets/private-journey.jpg";
+import roomImage from "../../../assets/journey-room-blankets.jpg";
 import Section from "../../../components/layout/Section";
 import SectionTitle from "../../../components/layout/SectionTitle";
 import { STEPS } from "../content";
@@ -12,8 +12,8 @@ export default function WhatToExpect() {
     >
       <SectionTitle kicker="What a journey is like">What to Expect</SectionTitle>
       <img
-        src={sessionImage}
-        alt="Noah sitting beside someone resting under a blanket after a private journey, among plants and a drum"
+        src={roomImage}
+        alt="A canal-side room with mats, blankets and candles laid out on a wooden floor"
         loading="lazy"
         className="w-full max-w-4xl mx-auto aspect-[16/9] object-cover rounded-2xl mb-14 sm:mb-16"
       />

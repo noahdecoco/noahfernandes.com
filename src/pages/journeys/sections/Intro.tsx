@@ -8,15 +8,11 @@ export default function Intro() {
     >
       <div className="max-w-2xl mx-auto text-center font-body text-bone/80 text-base sm:text-lg leading-relaxed space-y-6">
         <p>
-          Safe and Sound Journeys creates warm and welcoming journeys where
-          live music and sound hold the space for inner healing. They take
-          place in and around Amsterdam, in carefully chosen venues or
-          together with other facilitators and organisers.
-        </p>
-        <p>
-          We slow down and make room for whatever wants to come up: grief,
-          stress, heartbreak, joy, laughter or curiosity. All parts of you
-          are welcome.
+          Safe and Sound Journeys brings live music, breath and movement
+          together in warm and welcoming journeys. They take place in and around
+          Amsterdam, in carefully chosen venues or together with
+          other facilitators and organisers. Join an open journey, or arrange a
+          private one.
         </p>
       </div>
     </Section>

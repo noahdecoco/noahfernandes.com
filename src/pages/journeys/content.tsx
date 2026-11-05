@@ -6,27 +6,36 @@ import { inlineLink } from "../../styles";
 
 export const JOURNEYS = [
   {
-    title: "Sound Journeys",
-    body: "Lie down, close your eyes and let live music carry you inward. Voice, flute, drums and instruments from around the world, played in the moment for the people who are there.",
+    title: "Sound Healing Journeys",
+    body: "Lie down, close your eyes and let live music support your inner healing and well-being.",
   },
   {
-    title: "Breathwork & Sound",
-    body: "Conscious breathing, guided together with a breathwork facilitator, while the music follows the breath from the first inhale to the quiet afterwards.",
+    title: "Breathwork Concerts",
+    body: "With a breathwork facilitator guiding you, the music supports your breath and helps you integrate the experience afterwards.",
   },
   {
-    title: "Ceremony",
-    body: "Live music that holds the space in ceremonial settings, from truffle ceremonies (legal in the Netherlands) to cacao circles.",
+    title: "Movement & Sound",
+    body: "Live music combined with movement, dance or yoga, so the body can follow the sound.",
   },
   {
     title: "Private Journeys",
-    body: "A journey for one person, a couple or a small group, shaped around what you need right now.",
+    body: (
+      <>
+        Arranged just for you or your own small group, shaped around what you
+        need right now.{" "}
+        <a href="/#contact" className={inlineLink}>
+          Get in touch
+        </a>{" "}
+        to plan one.
+      </>
+    ),
   },
 ];
 
 export const STEPS = [
   {
     title: "Arrive",
-    body: "Settle in, have some tea and meet the group. There's time to ask anything you want to know.",
+    body: "Settle in, have some tea and get to know each other. There's time to ask anything you want to know.",
   },
   {
     title: "Set an intention",
@@ -34,7 +43,7 @@ export const STEPS = [
   },
   {
     title: "Journey",
-    body: "Lying down or sitting, eyes closed, the music holds you. Whatever comes up is welcome: grief, stress, joy, laughter or simply rest.",
+    body: "Lying down, sitting or moving, the music holds you. Whatever comes up is welcome: grief, stress, joy, laughter or simply rest.",
   },
   {
     title: "Come back",
@@ -84,15 +93,15 @@ export const FAQS: Faq[] = [
     a: "Yes, magic truffles are legal in the Netherlands. Only some journeys include them, it's always your choice, and most journeys are without any medicine at all.",
   },
   {
-    q: "Is a ceremony right for me?",
-    a: "Not for everyone. If you take medication, are pregnant, or have a history of heart or mental health conditions, please get in touch before booking a ceremony, so we can talk about whether it's safe for you.",
+    q: "Are truffles right for me?",
+    a: "Not for everyone. If you take medication, are pregnant, or have a history of heart or mental health conditions, please get in touch before booking, so we can talk about whether it's safe for you.",
   },
   {
     q: "What should I bring?",
     a: "Comfortable clothes and some water. Mats, cushions and blankets are usually there, and each event page says if you need anything else.",
   },
   {
-    q: "Can I book a private journey or one for my group?",
+    q: "Can I book a private journey for myself, a couple or my own group?",
     a: (
       <>
         Yes. Tell me a bit about what you're looking for through the{" "}
@@ -107,4 +116,4 @@ export const FAQS: Faq[] = [
 
 // the sheet's Type column decides where an event shows up.
 // these types appear here; Set, Workshop and Festival only on the home page.
-export const JOURNEY_TYPES = ["journey", "ceremony", "breathwork"];
+export const JOURNEY_TYPES = ["journey", "ceremony", "breathwork", "movement"];

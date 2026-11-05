@@ -26,6 +26,10 @@ export default function JourneyTypes() {
           </div>
         ))}
       </div>
+      <p className="font-body text-bone/60 text-sm sm:text-base leading-relaxed text-center max-w-2xl mx-auto mt-10">
+        Some journeys can be paired with a microdose of truffles, which are
+        legal in the Netherlands. This is always your choice.
+      </p>
     </Section>
   );
 }

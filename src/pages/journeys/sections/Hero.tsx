@@ -20,11 +20,14 @@ export default function Hero() {
           Safe and Sound Journeys
         </p>
         <h1 className="font-display italic text-bone mt-5 text-4xl sm:text-6xl lg:text-7xl leading-tight max-w-4xl mx-auto">
-          Let the music hold you, so you can let go
+          Let the music <br className="sm:hidden" />
+          hold you,
+          <br />
+          so you can let go
         </h1>
         <p className="font-body text-bone/85 text-base sm:text-xl leading-relaxed mt-8 max-w-2xl mx-auto">
-          Sound journeys where live music holds the space for inner healing.
-          In and around Amsterdam.
+          Journeys where live music holds the space for inner healing.
+          Open events and private journeys, in and around Amsterdam.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
           <a href="#upcoming" className={`${primaryButton} w-full sm:w-auto`}>

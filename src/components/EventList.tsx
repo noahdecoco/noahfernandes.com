@@ -43,7 +43,11 @@ export default function EventList({ events }: { events: EventItem[] }) {
                   .join(" · ")}
               </p>
             </div>
-            {e.link ? (
+            {e.private ? (
+              <span className="shrink-0 font-body text-bone/50 text-xs sm:text-sm px-4 sm:px-5 py-2">
+                Private
+              </span>
+            ) : e.link ? (
               <a
                 href={e.link}
                 target="_blank"
