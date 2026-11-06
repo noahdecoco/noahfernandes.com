@@ -9,6 +9,11 @@ export const YOUTUBE_URL = "https://www.youtube.com/@sounds-like-noah";
 export const HIPSY_URL = "https://hipsy.nl/safeandsoundjourneys";
 export const JOURNEYS_PATH = "/journeys/";
 export const INSTAGRAM_URL = "https://www.instagram.com/sounds.like.noah/";
+export const INSIGHT_TIMER_URL = "https://insighttimer.com/noahfernandes";
+
+// not in simple-icons: a singing bowl, like the Insight Timer app icon
+const INSIGHT_TIMER_ICON =
+  "M2.5 4.5h19a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-19a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1zM2.5 9.25h19c-.2 5.4-2.9 9.4-6.5 11v.75a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5v-.75c-3.6-1.6-6.3-5.6-6.5-11z";
 
 export const SOCIALS = [
   {
@@ -25,6 +30,11 @@ export const SOCIALS = [
     label: "Instagram",
     href: INSTAGRAM_URL,
     icon: siInstagram.path,
+  },
+  {
+    label: "Insight Timer",
+    href: INSIGHT_TIMER_URL,
+    icon: INSIGHT_TIMER_ICON,
   },
 ];
 
