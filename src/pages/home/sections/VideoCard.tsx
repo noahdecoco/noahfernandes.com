@@ -9,7 +9,7 @@ export default function VideoCard({
   featured = false,
 }: Video & { featured?: boolean }) {
   const [playing, setPlaying] = useState(false);
-  const radius = featured ? "rounded-2xl" : "rounded-xl";
+  const radius = "";
 
   if (playing) {
     return (

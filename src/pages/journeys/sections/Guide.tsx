@@ -10,15 +10,17 @@ export default function Guide() {
       className="border-t border-bone/10"
       glow="radial-gradient(ellipse 60% 55% at 20% 50%, rgba(201,150,44,0.24), transparent 70%), radial-gradient(ellipse 50% 50% at 90% 15%, rgba(168,84,46,0.18), transparent 70%)"
     >
-      <SectionTitle kicker="Who holds the space">Your Guide</SectionTitle>
-      <div className="grid gap-10 md:grid-cols-2 md:gap-14 items-center">
+      <div className="grid gap-12 md:grid-cols-[5fr_6fr] md:gap-16 items-center">
         <img
           src={guideImage}
           alt="Noah holding a wooden staff in an open field, looking out over the land"
           loading="lazy"
-          className="w-full max-w-md mx-auto md:max-w-none aspect-[4/5] object-cover object-[50%_45%] rounded-2xl"
+          className="-mx-6 w-[calc(100%+3rem)] max-w-none md:mx-0 md:w-[calc(100%+4rem)] md:-ml-16 lg:w-[calc(100%+10rem)] lg:-ml-40 aspect-[4/5] object-cover object-[50%_45%]"
         />
         <div className="font-body text-bone/75 text-base sm:text-lg leading-relaxed space-y-6">
+          <SectionTitle kicker="Who holds the space" align="left">
+            Your Guide
+          </SectionTitle>
           <p>
             Safe and Sound Journeys was founded in 2024 by Noah Fernandes, an
             Amsterdam-based musician and facilitator. He guides the journeys,

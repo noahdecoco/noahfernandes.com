@@ -23,10 +23,13 @@ export default function ReviewsSection({
       glow="radial-gradient(ellipse 50% 60% at 85% 30%, rgba(201,150,44,0.16), transparent 70%), radial-gradient(ellipse 45% 50% at 10% 85%, rgba(74,93,58,0.22), transparent 70%)"
     >
       <SectionTitle kicker={kicker}>Kind Words</SectionTitle>
-      <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2 max-w-4xl mx-auto">
-        {reviews.map((r) => (
-          <figure key={r.name} className="text-center">
-            <blockquote className="font-display italic text-bone text-xl sm:text-2xl leading-snug">
+      <div className="max-w-4xl mx-auto space-y-12 sm:space-y-16">
+        {reviews.map((r, i) => (
+          <figure
+            key={r.name}
+            className={`max-w-xl ${i % 2 ? "ml-auto text-right" : "text-left"}`}
+          >
+            <blockquote className="font-display italic text-bone text-2xl sm:text-3xl leading-snug">
               “{r.quote}”
             </blockquote>
             <figcaption className="font-body text-ochre/80 text-xs uppercase tracking-[0.25em] mt-4">
@@ -35,7 +38,7 @@ export default function ReviewsSection({
           </figure>
         ))}
       </div>
-      <p className="text-center mt-12">
+      <p className="text-center mt-16">
         <a
           href={HIPSY_URL}
           target="_blank"

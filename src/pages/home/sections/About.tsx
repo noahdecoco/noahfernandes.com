@@ -10,15 +10,20 @@ export default function About() {
       id="about"
       glow="radial-gradient(ellipse 60% 55% at 20% 50%, rgba(201,150,44,0.24), transparent 70%), radial-gradient(ellipse 50% 50% at 90% 15%, rgba(168,84,46,0.18), transparent 70%)"
     >
-      <SectionTitle>About</SectionTitle>
-      <div className="grid gap-10 md:grid-cols-2 md:gap-14 items-center">
-        <img
-          src={aboutImage}
-          alt="Noah playing bansuri flute on a misty bridge at sunrise"
-          loading="lazy"
-          className="w-full max-w-md mx-auto md:max-w-none aspect-[4/5] object-cover rounded-2xl"
-        />
+      <div className="grid gap-12 md:grid-cols-[5fr_6fr] md:gap-16 items-start">
+        <figure className="relative -mx-6 md:mx-0 md:-ml-16 lg:-ml-40 md:sticky md:top-24">
+          <img
+            src={aboutImage}
+            alt="Noah playing bansuri flute on a misty bridge at sunrise"
+            loading="lazy"
+            className="w-full aspect-[4/5] object-cover"
+          />
+          <figcaption className="relative -mt-16 mx-6 md:mx-0 md:ml-auto md:-mr-10 md:w-4/5 bg-bark/90 backdrop-blur-sm border-l-2 border-ochre/70 px-6 py-5 font-display italic text-bone text-xl sm:text-2xl leading-snug">
+            Every set starts with listening.
+          </figcaption>
+        </figure>
         <div className="font-body text-bone/75 text-base sm:text-lg leading-relaxed space-y-6">
+          <SectionTitle align="left">About</SectionTitle>
           <p>
             I'm Noah, born and raised in Goa, India, and based in Amsterdam
             since 2015. I create immersive music with the instruments I've

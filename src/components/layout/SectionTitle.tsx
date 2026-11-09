@@ -1,23 +1,31 @@
 import type { ReactNode } from "react";
+import Wave from "../Wave";
 
 export default function SectionTitle({
   children,
   kicker,
+  align = "center",
+  spacing = "mb-12 sm:mb-16",
 }: {
   children: ReactNode;
   kicker?: string;
+  align?: "center" | "left";
+  spacing?: string;
 }) {
+  const left = align === "left";
   return (
-    <div className="text-center mb-12 sm:mb-16">
+    <div className={`${spacing} ${left ? "text-left" : "text-center"}`}>
       {kicker && (
-        <p className="font-body text-ochre/80 text-xs uppercase tracking-[0.3em] mb-4">
+        <p className="font-body text-ochre/80 text-xs uppercase tracking-[0.3em] mb-3">
           {kicker}
         </p>
       )}
-      <h2 className="font-body font-light text-bone uppercase text-2xl sm:text-4xl tracking-[0.35em] sm:tracking-[0.45em] pl-[0.35em] sm:pl-[0.45em]">
+      <h2 className="font-display italic text-bone text-4xl sm:text-6xl leading-tight">
         {children}
       </h2>
-      <div className="mx-auto mt-6 h-px w-12 bg-ochre/60" />
+      <Wave
+        className={`h-5 mt-5 text-ochre/70 ${left ? "" : "mx-auto"}`}
+      />
     </div>
   );
 }

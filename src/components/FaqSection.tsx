@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Section from "./layout/Section";
 import SectionTitle from "./layout/SectionTitle";
+import Split from "./layout/Split";
 
 export type Faq = { q: string; a: ReactNode };
 
@@ -18,8 +19,14 @@ export default function FaqSection({
       className="border-t border-bone/10"
       glow="radial-gradient(ellipse 55% 50% at 85% 60%, rgba(62,58,94,0.35), transparent 70%), radial-gradient(ellipse 45% 40% at 10% 10%, rgba(201,150,44,0.10), transparent 70%)"
     >
-      <SectionTitle>{title}</SectionTitle>
-      <div className="max-w-3xl mx-auto divide-y divide-bone/10 border-y border-bone/10">
+      <Split
+        aside={
+          <SectionTitle align="left" spacing="mb-0">
+            {title}
+          </SectionTitle>
+        }
+      >
+      <div className="divide-y divide-bone/10 border-y border-bone/10">
         {faqs.map((f) => (
           <details key={f.q} className="group py-5">
             <summary className="font-body text-bone text-base sm:text-lg cursor-pointer list-none flex justify-between gap-6">
@@ -34,6 +41,7 @@ export default function FaqSection({
           </details>
         ))}
       </div>
+      </Split>
     </Section>
   );
 }
