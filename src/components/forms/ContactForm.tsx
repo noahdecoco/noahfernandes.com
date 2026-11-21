@@ -56,7 +56,7 @@ export default function ContactForm({ email }: { email: string }) {
       <div className="rounded-2xl border border-ochre/40 bg-bark/50 p-6 text-center">
         <p className="font-display italic text-bone text-xl">Thank you 🙏🏽</p>
         <p className="font-body text-bone/70 text-sm mt-2">
-          Your message is on its way. Noah will get back to you soon.
+          Your message is on its way. I'll get back to you soon.
         </p>
       </div>
     );
@@ -136,7 +136,7 @@ export default function ContactForm({ email }: { email: string }) {
 
       <div>
         <label htmlFor="cf-message" className={labelClass}>
-          Tell Noah about it
+          Tell me about it
         </label>
         <textarea
           id="cf-message"
@@ -158,7 +158,7 @@ export default function ContactForm({ email }: { email: string }) {
 
       {status === "error" && (
         <p className="font-body text-clay text-sm text-center">
-          Something went wrong. Please email Noah directly at{" "}
+          Something went wrong. Please email me directly at{" "}
           <a href={`mailto:${email}`} className="underline">
             {email}
           </a>
