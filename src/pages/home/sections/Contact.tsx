@@ -16,11 +16,11 @@ export default function Contact() {
               Book
             </SectionTitle>
             <p className="font-body text-bone/80 text-base sm:text-lg leading-relaxed">
-              Hosting a journey, a dance, a retreat or a workshop? Tell me about
-              it and I'll get back to you.
+              Hosting a journey, a dance, a retreat or a workshop? Share the
+              details and Noah will get back to you.
             </p>
             <p className="font-body text-bone/65 text-sm mt-6">
-              Or email me directly at{" "}
+              Or email Noah directly at{" "}
               <a href={`mailto:${EMAIL}`} className={`${linkClass} break-all`}>
                 {EMAIL}
               </a>

@@ -82,7 +82,7 @@ export const REVIEWS: Review[] = [
 export const FAQS: Faq[] = [
   {
     q: "Do I need any experience?",
-    a: "No. Most people come without having done anything like this before. I'll explain everything at the start, and you can go at your own pace.",
+    a: "No. Most people come without having done anything like this before. Everything is explained at the start, and you can go at your own pace.",
   },
   {
     q: "Is this therapy?",
@@ -94,7 +94,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Are truffles right for me?",
-    a: "Not for everyone. If you take medication, are pregnant, or have a history of heart or mental health conditions, please get in touch before booking, so we can talk about whether it's safe for you.",
+    a: "Not for everyone. If you take medication, are pregnant, or have a history of heart or mental health conditions, please get in touch before booking, to talk through whether it's safe for you.",
   },
   {
     q: "What should I bring?",
@@ -104,11 +104,11 @@ export const FAQS: Faq[] = [
     q: "Can I book a private journey for myself, a couple or my own group?",
     a: (
       <>
-        Yes. Tell me a bit about what you're looking for through the{" "}
+        Yes. Share a bit about what you're looking for through the{" "}
         <a href="/#contact" className={inlineLink}>
           contact form
         </a>{" "}
-        and we'll find a good fit.
+        and Noah will help you find a good fit.
       </>
     ),
   },

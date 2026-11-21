@@ -43,7 +43,7 @@ export default function NotifyDialog({
           Hear first about {eventTitle}
         </p>
         <p className="font-body text-bone/65 text-sm sm:text-base mt-3">
-          Join the newsletter and I'll let you know as soon as it opens.
+          Join the newsletter to hear as soon as it opens.
         </p>
         <div className="mt-8">
           {/* key resets the form (and its thank-you state) for each event */}

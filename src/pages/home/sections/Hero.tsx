@@ -31,10 +31,10 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-10">
           <a href="/#contact" className={`${primaryButton} w-full sm:w-auto`}>
-            Book me for your event
+            Book Noah for your event
           </a>
           <a href="/#watch" className={`${ghostButton} w-full sm:w-auto`}>
-            Watch me live
+            Watch him live
           </a>
         </div>
         <div className="mt-10">

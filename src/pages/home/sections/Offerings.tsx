@@ -11,7 +11,7 @@ const NUMERALS = ["i", "ii", "iii"];
 export default function Offerings() {
   return (
     <Section id="offerings" image={offeringsImage} overlay="bg-bark/85">
-      <SectionTitle kicker="Where my music lives" align="left">
+      <SectionTitle kicker="Where the music lives" align="left">
         Offerings
       </SectionTitle>
       <div className="grid gap-14 md:grid-cols-3 md:gap-10">
