@@ -15,7 +15,7 @@ export default function Listen() {
               Listen
             </SectionTitle>
             <p className="font-body text-bone/65 text-base">
-              Tracks produced in my home studio.
+              Tracks produced in Noah's home studio.
             </p>
           </>
         }

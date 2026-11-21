@@ -26,7 +26,7 @@ export default function Events({
       ) : (
         <div className="max-w-xl">
           <p className="font-body text-bone/75 text-base sm:text-lg leading-relaxed">
-            Nothing is planned right now. Join the newsletter or follow me on{" "}
+            Nothing is planned right now. Join the newsletter or follow Noah on{" "}
             <a
               href={INSTAGRAM_URL}
               target="_blank"
