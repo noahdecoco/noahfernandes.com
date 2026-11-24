@@ -30,7 +30,7 @@ export default function Hero() {
 
         <div className="relative px-6 md:px-0 -mt-10 md:mt-0 pb-20 md:pb-0 text-center md:text-left">
           <p className="font-body text-[11px] sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-ochre/90">
-            Musical Shaman &amp; Sound Healer
+            Ceremonial Musician &amp; Sound Healer
           </p>
           <h1 className="font-display italic text-bone mt-4 text-5xl sm:text-6xl lg:text-7xl leading-none">
             Noah Fernandes
@@ -41,9 +41,10 @@ export default function Hero() {
           <p className="font-body text-bone/75 text-base sm:text-lg leading-relaxed mt-6 max-w-xl mx-auto md:mx-0">
             Noah holds the music at psychedelic retreats, ceremonies and sound
             healing journeys. Not just bowls and gongs: guitar, flutes, voice
-            and drums, played live and shaped by the people in the room. With a
-            background in counselling, he brings care and steadiness to every
-            space he holds.
+            and drums, played live and shaped by the people in the room. He is
+            also trained in counselling, drawing on Nonviolent Communication,
+            Internal Family Systems, meditation and mindfulness, and brings
+            that care to every space he holds.
           </p>
           <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-3 mt-10">
             <a href="/#contact" className={`${primaryButton} w-full sm:w-auto`}>
