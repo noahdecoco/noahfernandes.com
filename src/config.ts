@@ -42,16 +42,16 @@ export const SOCIALS = [
 // just scroll, from another page they go home and land on the section
 export const NAV = [
   { label: "Events", href: "/#events" },
-  { label: "Watch", href: "/#watch" },
-  { label: "Listen", href: "/#listen" },
+  { label: "Live Sessions", href: "/#watch" },
+  { label: "Studio", href: "/#listen" },
   { label: "Journeys", href: JOURNEYS_PATH },
   { label: "About", href: "/#about" },
 ];
 
 export const FOOTER_LINKS = [
   { label: "Events", href: "/#events" },
-  { label: "Watch", href: "/#watch" },
-  { label: "Listen", href: "/#listen" },
+  { label: "Live Sessions", href: "/#watch" },
+  { label: "Studio", href: "/#listen" },
   { label: "Journeys", href: JOURNEYS_PATH },
   { label: "About", href: "/#about" },
   { label: "FAQ", href: "/#faq" },

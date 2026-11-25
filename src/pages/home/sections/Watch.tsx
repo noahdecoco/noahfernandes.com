@@ -11,8 +11,8 @@ export default function Watch() {
   return (
     <Section id="watch" image={watchImage} overlay="bg-bark/85">
       <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-2 mb-12 sm:mb-16">
-        <SectionTitle kicker="Live sessions" align="left" spacing="mb-0">
-          Watch
+        <SectionTitle kicker="On YouTube" align="left" spacing="mb-0">
+          Live Sessions
         </SectionTitle>
         <a
           href={YOUTUBE_URL}

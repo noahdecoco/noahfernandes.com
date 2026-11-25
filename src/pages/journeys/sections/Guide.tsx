@@ -23,7 +23,7 @@ export default function Guide() {
           </SectionTitle>
           <p>
             Safe and Sound Journeys was founded in 2024 by Noah Fernandes, an
-            Amsterdam-based musician and facilitator. He guides the journeys,
+            Amsterdam-based ceremonial musician, sound healer and facilitator. He guides the journeys,
             often together with guest practitioners.
           </p>
           <p>

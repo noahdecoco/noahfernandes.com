@@ -11,8 +11,8 @@ export default function Listen() {
       <Split
         aside={
           <>
-            <SectionTitle kicker="Studio recordings" align="left" spacing="mb-6">
-              Listen
+            <SectionTitle kicker="On Spotify" align="left" spacing="mb-6">
+              Studio Productions
             </SectionTitle>
             <p className="font-body text-bone/65 text-base">
               Tracks produced in Noah's home studio.
